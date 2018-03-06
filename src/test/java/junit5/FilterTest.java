@@ -50,7 +50,8 @@ public class FilterTest {
     @Test
     void filter_average() {
         Map<Integer, Integer> m = new HashMap<>();
-        OptionalDouble averagePrice = listings.stream().filter( l -> l.getBedrooms() == 5 && l.getYearBuilt() > 2013 )
+        OptionalDouble averagePrice = listings.stream()
+                .filter( l -> l.getBedrooms() == 5 && l.getYearBuilt() > 2013 )
                 .mapToDouble( Listing::getPrice ).average();
         System.out.println(averagePrice);
     }

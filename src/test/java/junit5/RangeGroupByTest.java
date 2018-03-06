@@ -32,9 +32,11 @@ public class RangeGroupByTest {
 
     @Test public void groupByAge_count( ) {
 
-        Map<Integer, Long> ageCount = employees.stream().filter( e -> e.getAge() > 30 )
+        Map<Integer, Long> ageCount = employees.stream()
+                .filter( e -> e.getAge() > 30 )
                 .sorted( Employee::compareTo )
-                .collect( Collectors.groupingBy( Employee::getAge, Collectors.counting() ) );
+                .collect( Collectors.groupingBy( Employee::getAge,
+                        Collectors.counting() ) );
 
         ageCount.forEach((a,c)-> {
             System.out.println(a + "::" + c);
@@ -54,7 +56,8 @@ public class RangeGroupByTest {
 
     @Test public void groupByAge_toSet( ) {
 
-        Map<Integer, Set<Employee>> result = employees.stream().filter( e -> e.getAge() > 30 )
+        Map<Integer, Set<Employee>> result = employees.stream()
+                .filter( e -> e.getAge() > 30 )
                 .collect( Collectors.groupingBy( Employee::getAge, toSet() ) );
 
         //System.out.println(result);
@@ -67,8 +70,10 @@ public class RangeGroupByTest {
 
     @Test public void groupByAge_then_groupByGender_list( ) {
 
-        Map<Integer, Map<String, Set<Employee>>> result = employees.stream().filter( e -> e.getAge() > 30 )
-                .collect( Collectors.groupingBy( Employee::getAge, Collectors.groupingBy(Employee::getGender, toSet()) ) );
+        Map<Integer, Map<String, Set<Employee>>> result = employees.stream()
+                .filter( e -> e.getAge() > 30 )
+                .collect( Collectors.groupingBy( Employee::getAge,
+                        Collectors.groupingBy(Employee::getGender, toSet()) ) );
                 //.collect(groupingBy(BlogPost::getAuthor, groupingBy(BlogPost::getType)));
         result.forEach( ( Integer k, Map<String, Set<Employee>> v ) ->{
             System.out.println();
@@ -83,7 +88,8 @@ public class RangeGroupByTest {
         Map<Integer, Map<String, Long>> result = employees.stream()
                 .sorted(comparing(Employee::getAge))
                 .filter( e -> e.getAge() > 30 )
-                .collect( Collectors.groupingBy( Employee::getAge, Collectors.groupingBy(Employee::getGender, Collectors.counting() ) ) );
+                .collect( Collectors.groupingBy( Employee::getAge,
+                        Collectors.groupingBy(Employee::getGender, Collectors.counting() ) ) );
         result.forEach( ( Integer k, Map<String, Long> v ) -> {
                     System.out.println();
                     System.out.print(k + "::");
@@ -93,7 +99,8 @@ public class RangeGroupByTest {
     }
     @Test public void natural_sorting_by_age( ) {
 
-        List<Employee> results = employees.stream().sorted( comparing( Employee::getAge ) )
+        List<Employee> results = employees.stream()
+                .sorted( comparing( Employee::getAge ) )
                 .collect( Collectors.toList() );
         results.forEach(e -> System.out.println("Age:" + e.getAge() + "::" + e.getName()) );
     }
@@ -108,7 +115,8 @@ public class RangeGroupByTest {
 
     @Test
     public void sort_then_to_grouping_by() {
-        Map<Integer, List<Employee>> unsorted = employees.stream().filter( e -> e.getAge() > 40 )
+        Map<Integer, List<Employee>> unsorted = employees.stream()
+                .filter( e -> e.getAge() > 40 )
                 .sorted( Comparator.comparingInt( Employee::getAge ) )
                 .collect( Collectors.groupingBy( Employee::getAge, toList() ) );
         Map<Integer, List<Employee>> sorted = unsorted.entrySet().stream()
