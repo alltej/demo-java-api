@@ -1,4 +1,4 @@
-package MapConversion;
+package SiteMapping;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.alltej.models;
+package EmployeeMapping;
 
 import lombok.Builder;
 import lombok.Data;

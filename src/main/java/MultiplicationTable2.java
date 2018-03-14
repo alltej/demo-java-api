@@ -6,6 +6,63 @@ import java.util.stream.IntStream;
  */
 public class MultiplicationTable2 {
     public static void main( String[] args ) {
+        //printMultiplicationTable_orig();
+
+        IntStream.rangeClosed( 1,10 ).forEach( x ->{
+            StringBuilder s = new StringBuilder( x );
+            IntStream.rangeClosed( 1,10 ).forEach( y ->{
+                final Integer product = x*y;
+                //System.out.println( product + "    ");
+                s.append( product ).append( "\t\t" );
+            } );
+            System.out.println(s.toString());
+        } );
+
+    }
+
+//    1   2   3   4   5   6   7   8   9
+//1   1   2   3   4   5   6   7   8   9
+//2   2   4   6   8   10  12  14  16  18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private static void printMultiplicationTable_orig() {
         final int MULTIPLIER_MAX = 9;
         final int PAD_SIZE = 5;
 
@@ -26,10 +83,6 @@ public class MultiplicationTable2 {
                             } );
                     System.out.println(sb);
                 } );
-
-//        integers.forEach( i -> {
-//
-//        } );
     }
 
     private static String padRight( final String s, final int i, final String padChar ) {

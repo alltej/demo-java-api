@@ -1,6 +1,6 @@
 package junit5;
 
-import com.alltej.models.Employee;
+import EmployeeMapping.Employee;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -29,6 +29,49 @@ public class RangeGroupByTest {
                     Employee.of( "Mat", 49, "M" ),
                     Employee.of( "Pat", 50, "M" ),
                     Employee.of( "Peter", 56, "M" ) );
+
+    @Test public void groupByAge_listOfEmployees() {
+        Map<Integer, List<Employee>> employeesByAge = employees.stream()
+                .filter( e -> e.getAge() > 35 )
+                .collect( Collectors.groupingBy( Employee::getAge, toList() ));
+
+    }
+
+    @Test public void groupByAge_countNumberOfEmployees() {
+        Map<Integer, Long> employeesByAge = employees.stream().filter( e -> e.getAge() > 35 )
+                .collect( Collectors.groupingBy( Employee::getAge, Collectors.counting() ) );
+        employeesByAge.entrySet().stream().forEach( e -> System.out.println( e.getKey() + "::" + e.getValue() ) );
+    }
+
+    @Test public  void groupByAge_then_gender_listOfEmployees() {
+        Map<Integer, Map<String, List<Employee>>> mapOfEmployees= employees.stream().collect(
+                Collectors.groupingBy( Employee::getAge, Collectors.groupingBy( Employee::getGender, toList() ) ) );
+
+        mapOfEmployees.entrySet().forEach( e -> {
+            System.out.println("------------");
+            System.out.println("Age: " + e.getKey());
+            System.out.println("\t");
+            e.getValue().entrySet().forEach( g -> {
+                System.out.println("Gender:"+ g.getKey());
+                g.getValue().forEach( l -> {
+                    System.out.println("name: " + l.getName() + ", age:" + l.getAge());
+                } );
+            }  );
+        } );
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Test public void groupByAge_count( ) {
 
