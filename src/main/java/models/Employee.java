@@ -1,5 +1,6 @@
-package EmployeeMapping;
+package models;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,10 +8,14 @@ import lombok.NoArgsConstructor;
 @Data
 @Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class Employee implements Comparable<Employee> {
     private String name;
     private Integer age;
     private String gender;
+
+    private Department department;
+    private Integer salary;
 
     private Employee( String name, Integer age, String gender ) {
         this.age = age;
@@ -24,5 +29,11 @@ public class Employee implements Comparable<Employee> {
 
     public static Employee of(String name, Integer age, String gender) {
         return new Employee( name, age, gender );
+    }
+    public static Employee of(String name, Integer age, String gender, Department department, Integer salary) {
+        Employee employee = new Employee( name, age, gender );
+        employee.setDepartment( department );
+        employee.setSalary( salary );
+        return employee;
     }
 }

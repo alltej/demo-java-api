@@ -1,6 +1,6 @@
 package junit5;
 
-import EmployeeMapping.Employee;
+import models.Employee;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;
@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.toList;
+import static java.util.stream.Collectors.toMap;
 import static java.util.stream.Collectors.toSet;
 
 public class RangeGroupByTest {
@@ -27,38 +28,82 @@ public class RangeGroupByTest {
                     Employee.of( "Mercy", 45, "F" ),
                     Employee.of( "Matthew", 47, "M" ),
                     Employee.of( "Mat", 49, "M" ),
+                    Employee.of( "Mary-ann", 49, "F" ),
                     Employee.of( "Pat", 50, "M" ),
                     Employee.of( "Peter", 56, "M" ) );
 
-    @Test public void groupByAge_listOfEmployees() {
-        Map<Integer, List<Employee>> employeesByAge = employees.stream()
-                .filter( e -> e.getAge() > 35 )
-                .collect( Collectors.groupingBy( Employee::getAge, toList() ));
+    @Test public void groupByAge_gt_30_listOfEmployees() {
+        Map<Integer, List<Employee>> eeByAge = employees.stream()
+                .filter( e->e.getAge()>30 )
+                .collect( Collectors.groupingBy( Employee::getAge, toList() ) );
+
+        eeByAge.entrySet().forEach( e -> {
+            System.out.println();
+            System.out.println(e.getKey());
+            System.out.println("\t\t");
+            e.getValue().forEach( v -> {
+                System.out.println(v.getName() + ":" + v.getGender());
+            } );
+            System.out.println();
+            System.out.print("---------");
+        } );
 
     }
 
     @Test public void groupByAge_countNumberOfEmployees() {
-        Map<Integer, Long> employeesByAge = employees.stream().filter( e -> e.getAge() > 35 )
-                .collect( Collectors.groupingBy( Employee::getAge, Collectors.counting() ) );
-        employeesByAge.entrySet().stream().forEach( e -> System.out.println( e.getKey() + "::" + e.getValue() ) );
+        Map<Integer, Long> eeByAgeAndGetCount = employees.stream().collect( Collectors.groupingBy( Employee::getAge, Collectors.counting() ) );
+        eeByAgeAndGetCount.entrySet().forEach(  e -> {
+            System.out.println(e.getKey() + "::" + e.getValue());
+        } );
     }
 
     @Test public  void groupByAge_then_gender_listOfEmployees() {
-        Map<Integer, Map<String, List<Employee>>> mapOfEmployees= employees.stream().collect(
+        Map<Integer, Map<String, List<Employee>>> eeByAgeByGenderThenList = employees.stream().collect(
                 Collectors.groupingBy( Employee::getAge, Collectors.groupingBy( Employee::getGender, toList() ) ) );
-
-        mapOfEmployees.entrySet().forEach( e -> {
-            System.out.println("------------");
-            System.out.println("Age: " + e.getKey());
-            System.out.println("\t");
+        eeByAgeByGenderThenList.entrySet().forEach( e -> {
+            System.out.println("********************");
+            System.out.println(e.getKey());
+            System.out.println("---");
             e.getValue().entrySet().forEach( g -> {
-                System.out.println("Gender:"+ g.getKey());
-                g.getValue().forEach( l -> {
-                    System.out.println("name: " + l.getName() + ", age:" + l.getAge());
+                System.out.println(g.getKey());
+                //System.out.println("------");
+                g.getValue().forEach( v -> {
+                    System.out.println("------"  + v.getName());
                 } );
-            }  );
+            } );
         } );
     }
+
+
+//    @Test public void groupByAge_listOfEmployees() {
+//        Map<Integer, List<Employee>> employeesByAge = employees.stream()
+//                .filter( e -> e.getAge() > 35 )
+//                .collect( Collectors.groupingBy( Employee::getAge, toList() ));
+//
+//    }
+//
+//    @Test public void groupByAge_countNumberOfEmployees() {
+//        Map<Integer, Long> employeesByAge = employees.stream().filter( e -> e.getAge() > 35 )
+//                .collect( Collectors.groupingBy( Employee::getAge, Collectors.counting() ) );
+//        employeesByAge.entrySet().stream().forEach( e -> System.out.println( e.getKey() + "::" + e.getValue() ) );
+//    }
+//
+//    @Test public  void groupByAge_then_gender_listOfEmployees() {
+//        Map<Integer, Map<String, List<Employee>>> mapOfEmployees= employees.stream().collect(
+//                Collectors.groupingBy( Employee::getAge, Collectors.groupingBy( Employee::getGender, toList() ) ) );
+//
+//        mapOfEmployees.entrySet().forEach( e -> {
+//            System.out.println("------------");
+//            System.out.println("Age: " + e.getKey());
+//            System.out.println("\t");
+//            e.getValue().entrySet().forEach( g -> {
+//                System.out.println("Gender:"+ g.getKey());
+//                g.getValue().forEach( l -> {
+//                    System.out.println("name: " + l.getName() + ", age:" + l.getAge());
+//                } );
+//            }  );
+//        } );
+//    }
 
 
 
