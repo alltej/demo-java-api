@@ -11,11 +11,6 @@ import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
 
-/**
- * @author Allan Tejano
- * 3/15/2018
- */
-
 public class EmployeeDepartmentTests {
     private static final Department DepartmentHR = Department.of( 1, "HR" );
     private static final Department DepartmentPayroll = Department.of( 2, "Payroll" );
@@ -35,37 +30,21 @@ public class EmployeeDepartmentTests {
 
     // Group employees by department then_forEach_with_lambda
     @Test public void group_employees_by_department_then_forEach_with_lambda() {
-        Map<Department, List<Employee>> eeByDepts = ee.stream().collect( Collectors.groupingBy( Employee::getDepartment ) );
-        eeByDepts.forEach( (k, v) -> {
-            System.out.println("**********************");
-            System.out.println( k.getName() );
-            v.forEach( n ->{
-                System.out.println(n.getName());
-            } );
-        } );
     }
 
     // Group employees by department then_forEach_with_stream_api
     @Test public void group_employees_by_department_then_forEach_with_stream_api() {
-        Map<Department, List<Employee>> eeByDepts = ee.stream().collect( Collectors.groupingBy( Employee::getDepartment ) );
-        eeByDepts.entrySet().stream().forEach( m ->{
-            System.out.println("**********************");
-            System.out.println(m.getKey().getName());
-            m.getValue().forEach( e -> {
-                System.out.println(e.getName());
-            } );
-        } );
     }
 
     // Compute sum of salaries by department
     @Test public void compute_salaries_by_dept() {
-        Map<Department, Integer> salarySumByDept = ee.stream().collect(
-                Collectors.groupingBy( Employee::getDepartment, Collectors.summingInt( Employee::getSalary ) ) );
-        salarySumByDept.entrySet().stream().forEach(  e ->{
-            System.out.println(e.getKey().getName() + "::" + e.getValue());
-        } );
     }
 
+    // Compute average of salaries by department
     @Test public void compute_average_salary_by_dept() {
+    }
+
+    // Compute total and average of salaries by department
+    @Test public void compute_total_and_average_salary_by_dept() {
     }
 }

@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15ffee0a-5ace-4217-ab09-b9dd841f5b33" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/models/Department.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/models/EmployeeSalary.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/models/Person.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/junit5/CollectorsMiscTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests_180315.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/EmployeeDepartmentTestsTemplate.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EmployeeMapping/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/models/Employee.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit5/RangeGroupByTest.java" afterPath="$PROJECT_DIR$/src/test/java/junit5/RangeGroupByTest.java" />
+      <change beforePath="$PROJECT_DIR$/demo-java-api.iml" afterPath="$PROJECT_DIR$/demo-java-api.iml" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests.java" afterPath="$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/junit5/FilterTest.java" afterPath="$PROJECT_DIR$/src/test/java/junit5/FilterTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,49 +24,52 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/junit5/RangeGroupByTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="726">
-              <caret line="66" column="51" lean-forward="true" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+              <caret line="66" column="51" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CollectorsMiscTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/junit5/CollectorsMiscTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="27" column="59" lean-forward="true" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeSalary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/models/EmployeeSalary.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-              <folding>
-                <element signature="e#136#137#0" expanded="true" />
-                <element signature="e#172#173#0" expanded="true" />
-                <element signature="e#235#236#0" expanded="true" />
-                <element signature="e#264#265#0" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmployeeDepartmentTests.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmployeeDepartmentTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1033">
-              <caret line="78" column="73" lean-forward="false" selection-start-line="78" selection-start-column="73" selection-end-line="78" selection-end-column="73" />
+            <state relative-caret-position="-137">
+              <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/models/Employee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeDepartmentTests_180315.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests_180315.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="81" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeDepartmentTestsTemplate.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/EmployeeDepartmentTestsTemplate.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="685">
+              <caret line="47" column="66" lean-forward="false" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,21 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/models/Employee.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FilterTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/junit5/FilterTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="873">
-              <caret line="53" column="16" lean-forward="false" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+            <state relative-caret-position="380">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,6 +142,7 @@
       <find>30000,</find>
       <find>new Employee</find>
       <find>2</find>
+      <find>average</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;30000&quot;,</replace>
@@ -183,7 +175,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/alltej/models/Listing.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alltej/models/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/data/SampleListing.java" />
-        <option value="$PROJECT_DIR$/src/test/java/junit5/FilterTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/junit5/MapTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/junit5/MapConversionTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/MapConversion/MapConversion.java" />
@@ -202,6 +193,9 @@
         <option value="$PROJECT_DIR$/src/main/java/models/EmployeeSalary.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Department.java" />
         <option value="$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/junit5/FilterTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests_180315.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/EmployeeDepartmentTestsTemplate.txt" />
       </list>
     </option>
   </component>
@@ -257,37 +251,6 @@
               <item name="alltejdemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="demo-java-api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alltejdemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo-java-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alltejdemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo-java-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="EmployeeMapping" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alltejdemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo-java-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="alltejdemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="demo-java-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -304,6 +267,13 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="junit5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="alltejdemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo-java-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -341,7 +311,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EmployeeDepartmentTests.compute_salaries_by_dept">
+  <component name="RunManager" selected="JUnit.EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -362,10 +332,10 @@
       <module name="" />
       <envs />
     </configuration>
-    <configuration name="CollectorsMiscTest.compute_sum_of_salaries_of_employee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeDepartmentTests_180315.compute_average_salary_by_dept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="models.*" />
+          <option name="PATTERN" value="junit5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -373,8 +343,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="junit5" />
-      <option name="MAIN_CLASS_NAME" value="junit5.CollectorsMiscTest" />
-      <option name="METHOD_NAME" value="compute_sum_of_salaries_of_employee" />
+      <option name="MAIN_CLASS_NAME" value="junit5.EmployeeDepartmentTests_180315" />
+      <option name="METHOD_NAME" value="compute_average_salary_by_dept" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -387,7 +357,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="EmployeeDepartmentTests.compute_salaries_by_dept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeDepartmentTests_180315.compute_salaries_by_dept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="junit5.*" />
@@ -398,7 +368,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="junit5" />
-      <option name="MAIN_CLASS_NAME" value="junit5.EmployeeDepartmentTests" />
+      <option name="MAIN_CLASS_NAME" value="junit5.EmployeeDepartmentTests_180315" />
       <option name="METHOD_NAME" value="compute_salaries_by_dept" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -412,7 +382,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="EmployeeDepartmentTests.group_employees_by_department" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="junit5.*" />
@@ -423,8 +393,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="junit5" />
-      <option name="MAIN_CLASS_NAME" value="junit5.EmployeeDepartmentTests" />
-      <option name="METHOD_NAME" value="group_employees_by_department" />
+      <option name="MAIN_CLASS_NAME" value="junit5.EmployeeDepartmentTests_180315" />
+      <option name="METHOD_NAME" value="compute_total_and_average_salary_by_dept" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -437,7 +407,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="EmployeeDepartmentTests.group_employees_by_department_then_forEach_with_lambda" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_lambda" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="junit5.*" />
@@ -448,7 +418,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="junit5" />
-      <option name="MAIN_CLASS_NAME" value="junit5.EmployeeDepartmentTests" />
+      <option name="MAIN_CLASS_NAME" value="junit5.EmployeeDepartmentTests_180315" />
       <option name="METHOD_NAME" value="group_employees_by_department_then_forEach_with_lambda" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -462,7 +432,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="EmployeeDepartmentTests.group_employees_by_department_then_forEach_with_stream_api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_stream_api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="junit5.*" />
@@ -473,7 +443,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="junit5" />
-      <option name="MAIN_CLASS_NAME" value="junit5.EmployeeDepartmentTests" />
+      <option name="MAIN_CLASS_NAME" value="junit5.EmployeeDepartmentTests_180315" />
       <option name="METHOD_NAME" value="group_employees_by_department_then_forEach_with_stream_api" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -548,19 +518,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.CollectorsMiscTest.compute_sum_of_salaries_of_employee" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests.group_employees_by_department" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests.group_employees_by_department_then_forEach_with_lambda" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests.group_employees_by_department_then_forEach_with_stream_api" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests.compute_salaries_by_dept" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_lambda" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_stream_api" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_salaries_by_dept" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_average_salary_by_dept" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests.compute_salaries_by_dept" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests.group_employees_by_department_then_forEach_with_stream_api" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests.group_employees_by_department_then_forEach_with_lambda" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests.group_employees_by_department" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CollectorsMiscTest.compute_sum_of_salaries_of_employee" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_average_salary_by_dept" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_salaries_by_dept" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_lambda" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_stream_api" />
       </list>
     </recent_temporary>
   </component>
@@ -588,7 +558,7 @@
       <workItem from="1520423728769" duration="596000" />
       <workItem from="1520518205308" duration="3743000" />
       <workItem from="1520543856519" duration="7953000" />
-      <workItem from="1521060802027" duration="5911000" />
+      <workItem from="1521060802027" duration="12077000" />
     </task>
     <task id="LOCAL-00001" summary="Added MapConversionApp - transform Map to different Map structure">
       <created>1520349895735</created>
@@ -604,46 +574,53 @@
       <option name="project" value="LOCAL" />
       <updated>1521060832071</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added MapConversionApp - transform Map to different Map structure">
+      <created>1521122996037</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1521122996037</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CollectorsMiscTest_accumulateNamesToList - 2018.03.15 at 09h 17m 35s.xml">
-      <configuration name="CollectorsMiscTest.accumulateNamesToList" configurationId="JUnit" />
+    <history-entry file="EmployeeDepartmentTests_180315_compute_average_salary_by_dept - 2018.03.16 at 00h 04m 04s.xml">
+      <configuration name="EmployeeDepartmentTests_180315.compute_average_salary_by_dept" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectorsMiscTest_accumulate_names_into_a_treeset - 2018.03.15 at 09h 17m 40s.xml">
-      <configuration name="CollectorsMiscTest.accumulate_names_into_a_treeset" configurationId="JUnit" />
+    <history-entry file="EmployeeDepartmentTests_180315_compute_average_salary_by_dept - 2018.03.16 at 00h 09m 23s.xml">
+      <configuration name="EmployeeDepartmentTests_180315.compute_average_salary_by_dept" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectorsMiscTest_compute_sum_of_salaries_of_employee - 2018.03.15 at 09h 27m 59s.xml">
-      <configuration name="CollectorsMiscTest.compute_sum_of_salaries_of_employee" configurationId="JUnit" />
+    <history-entry file="EmployeeDepartmentTests_180315_compute_average_salary_by_dept - 2018.03.16 at 00h 09m 52s.xml">
+      <configuration name="EmployeeDepartmentTests_180315.compute_average_salary_by_dept" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectorsMiscTest_compute_sum_of_salaries_of_employee - 2018.03.15 at 09h 28m 40s.xml">
-      <configuration name="CollectorsMiscTest.compute_sum_of_salaries_of_employee" configurationId="JUnit" />
+    <history-entry file="EmployeeDepartmentTests_180315_compute_salaries_by_dept - 2018.03.15 at 23h 47m 00s.xml">
+      <configuration name="EmployeeDepartmentTests_180315.compute_salaries_by_dept" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CollectorsMiscTest_convert_elements_toString_and_concatenate_them_separated_by_comma - 2018.03.15 at 09h 20m 05s.xml">
-      <configuration name="CollectorsMiscTest.convert_elements_toString_and_concatenate_them_separated_by_comma" configurationId="JUnit" />
+    <history-entry file="EmployeeDepartmentTests_180315_compute_salaries_by_dept - 2018.03.16 at 00h 09m 39s.xml">
+      <configuration name="EmployeeDepartmentTests_180315.compute_salaries_by_dept" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeDepartmentTests_compute_salaries_by_dept - 2018.03.15 at 10h 08m 50s.xml">
-      <configuration name="EmployeeDepartmentTests.compute_salaries_by_dept" configurationId="JUnit" />
+    <history-entry file="EmployeeDepartmentTests_180315_compute_total_and_average_salary_by_dept - 2018.03.16 at 00h 15m 37s.xml">
+      <configuration name="EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeDepartmentTests_group_employees_by_department - 2018.03.15 at 09h 52m 27s.xml">
-      <configuration name="EmployeeDepartmentTests.group_employees_by_department" configurationId="JUnit" />
+    <history-entry file="EmployeeDepartmentTests_180315_group_employees_by_department_then_forEach_with_lambda - 2018.03.15 at 23h 29m 09s.xml">
+      <configuration name="EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_lambda" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeDepartmentTests_group_employees_by_department_then_forEach_with_lambda - 2018.03.15 at 10h 00m 49s.xml">
-      <configuration name="EmployeeDepartmentTests.group_employees_by_department_then_forEach_with_lambda" configurationId="JUnit" />
+    <history-entry file="EmployeeDepartmentTests_180315_group_employees_by_department_then_forEach_with_lambda - 2018.03.15 at 23h 30m 20s.xml">
+      <configuration name="EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_lambda" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeDepartmentTests_group_employees_by_department_then_forEach_with_lambda - 2018.03.15 at 10h 02m 36s.xml">
-      <configuration name="EmployeeDepartmentTests.group_employees_by_department_then_forEach_with_lambda" configurationId="JUnit" />
+    <history-entry file="EmployeeDepartmentTests_180315_group_employees_by_department_then_forEach_with_lambda - 2018.03.15 at 23h 39m 26s.xml">
+      <configuration name="EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_lambda" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EmployeeDepartmentTests_group_employees_by_department_then_forEach_with_stream_api - 2018.03.15 at 10h 05m 11s.xml">
-      <configuration name="EmployeeDepartmentTests.group_employees_by_department_then_forEach_with_stream_api" configurationId="JUnit" />
+    <history-entry file="EmployeeDepartmentTests_180315_group_employees_by_department_then_forEach_with_stream_api - 2018.03.15 at 23h 39m 21s.xml">
+      <configuration name="EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_stream_api" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28735000" />
+    <option name="totallyTimeSpent" value="34901000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
+    <frame x="-13" y="-13" width="2906" height="1746" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -653,13 +630,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23081201" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28859526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.109144546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26119402" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2012894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -671,7 +649,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -704,38 +681,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/SiteMapping/SiteValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="15" column="60" lean-forward="false" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#232#233#0" expanded="false" />
-            <element signature="e#280#281#0" expanded="false" />
-            <element signature="e#342#343#0" expanded="false" />
-            <element signature="e#377#378#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/SiteMapping/Meaurement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#314#315#0" expanded="false" />
-            <element signature="e#341#342#0" expanded="false" />
-            <element signature="e#390#391#0" expanded="false" />
-            <element signature="e#422#423#0" expanded="false" />
-            <element signature="e#458#459#0" expanded="false" />
-            <element signature="e#486#487#0" expanded="false" />
-            <element signature="e#534#535#0" expanded="false" />
-            <element signature="e#568#569#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/SiteMapping/DbRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1083,25 +1028,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/EmployeeSalary.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="6" column="7" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding>
-            <element signature="e#136#137#0" expanded="true" />
-            <element signature="e#172#173#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#136#137#0" expanded="false" />
+            <element signature="e#172#173#0" expanded="false" />
+            <element signature="e#235#236#0" expanded="false" />
+            <element signature="e#264#265#0" expanded="false" />
+            <element signature="e#321#322#0" expanded="false" />
+            <element signature="e#372#373#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1109,7 +1046,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/junit5/CollectorsMiscTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="623">
-          <caret line="27" column="59" lean-forward="true" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
+          <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1119,7 +1056,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/junit5/RangeGroupByTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="726">
-          <caret line="66" column="51" lean-forward="true" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+          <caret line="66" column="51" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1128,14 +1065,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/junit5/FilterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="873">
-          <caret line="53" column="16" lean-forward="false" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1170,11 +1099,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1033">
-          <caret line="78" column="73" lean-forward="false" selection-start-line="78" selection-start-column="73" selection-end-line="78" selection-end-column="73" />
+        <state relative-caret-position="-137">
+          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/junit5/FilterTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests_180315.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="81" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/EmployeeDepartmentTestsTemplate.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="47" column="66" lean-forward="false" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
+          <folding />
         </state>
       </provider>
     </entry>
