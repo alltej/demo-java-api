@@ -1,4 +1,4 @@
-package SiteMapping;
+package com.alltej.apps.sitemapping;
 
 import java.util.HashMap;
 import java.util.List;

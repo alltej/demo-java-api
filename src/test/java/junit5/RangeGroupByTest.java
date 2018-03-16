@@ -1,6 +1,6 @@
 package junit5;
 
-import models.Employee;
+import com.alltej.models.Employee;
 import org.junit.jupiter.api.Test;
 
 import java.util.*;

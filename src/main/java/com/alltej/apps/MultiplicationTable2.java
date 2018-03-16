@@ -1,3 +1,5 @@
+package com.alltej.apps;
+
 import java.util.stream.IntStream;
 
 /**

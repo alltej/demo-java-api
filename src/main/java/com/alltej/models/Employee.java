@@ -1,4 +1,4 @@
-package models;
+package com.alltej.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

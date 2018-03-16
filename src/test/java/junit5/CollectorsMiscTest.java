@@ -1,7 +1,7 @@
 package junit5;
 
-import models.EmployeeSalary;
-import models.Person;
+import com.alltej.models.EmployeeSalary;
+import com.alltej.models.Person;
 import org.junit.jupiter.api.Test;
 
 import java.util.Collection;

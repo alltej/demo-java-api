@@ -1,4 +1,4 @@
-package models;
+package com.alltej.models;
 
 /**
  * @author Allan Tejano

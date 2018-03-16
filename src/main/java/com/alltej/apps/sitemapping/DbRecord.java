@@ -1,4 +1,4 @@
-package SiteMapping;
+package com.alltej.apps.sitemapping;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

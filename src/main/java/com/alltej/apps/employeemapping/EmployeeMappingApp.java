@@ -1,4 +1,4 @@
-package EmployeeMapping;
+package com.alltej.apps.employeemapping;
 
 /**
  * @author Allan Tejano

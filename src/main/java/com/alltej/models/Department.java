@@ -1,4 +1,4 @@
-package models;
+package com.alltej.models;
 
 public class Department {
     private Integer departmentId;

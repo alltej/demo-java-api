@@ -1,4 +1,4 @@
-package data;
+package com.alltej.data;
 
 import com.alltej.models.Listing;
 
