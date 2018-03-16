@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15ffee0a-5ace-4217-ab09-b9dd841f5b33" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/MultiplicationTableAppTemplate.txt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EmployeeMapping/EmployeeMappingApp.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/apps/employeemapping/EmployeeMappingApp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MultiplicationTable.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/apps/MultiplicationTable.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MultiplicationTable2.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/apps/MultiplicationTable2.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SiteMapping/DbRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/apps/sitemapping/DbRecord.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SiteMapping/MapConversionApp.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/apps/sitemapping/MapConversionApp.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SiteMapping/Meaurement.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/apps/sitemapping/Meaurement.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SiteMapping/SiteValues.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/apps/sitemapping/SiteValues.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/StreamPerformance.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/apps/StreamPerformance.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/SampleListing.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/SampleListing.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/data/SampleListing.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Department.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/models/Department.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/models/Employee.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/EmployeeSalary.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/models/EmployeeSalary.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Person.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/models/Person.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit5/CollectorsMiscTest.java" afterPath="$PROJECT_DIR$/src/test/java/junit5/CollectorsMiscTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests.java" afterPath="$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests_180315.java" afterPath="$PROJECT_DIR$/src/test/java/junit5/EmployeeDepartmentTests_180315.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit5/RangeGroupByTest.java" afterPath="$PROJECT_DIR$/src/test/java/junit5/RangeGroupByTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/EmployeeDepartmentTestsTemplate.txt" afterPath="$PROJECT_DIR$/src/test/resources/EmployeeDepartmentTestsTemplate.txt" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/alltej/apps/MultiplicationTable2.java" afterPath="$PROJECT_DIR$/src/main/java/com/alltej/apps/MultiplicationTable2.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -68,21 +51,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeMappingApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/alltej/apps/employeemapping/EmployeeMappingApp.java">
+      <file leaf-file-name="MultiplicationTable2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/alltej/apps/MultiplicationTable2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            <state relative-caret-position="594">
+              <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultiplicationTable2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/alltej/apps/MultiplicationTable2.java">
+      <file leaf-file-name="EmployeeDepartmentTestsTemplate.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/EmployeeDepartmentTestsTemplate.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="942">
+              <caret line="47" column="66" lean-forward="false" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultiplicationTableAppTemplate.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/MultiplicationTableAppTemplate.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="12" column="82" lean-forward="false" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -98,7 +91,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultiplicationTable.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MultiplicationTable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/alltej/apps/MultiplicationTable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -123,16 +116,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="528">
               <caret line="27" column="59" lean-forward="false" selection-start-line="27" selection-start-column="59" selection-end-line="27" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StreamPerformance.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/alltej/apps/StreamPerformance.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -209,6 +192,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/alltej/models/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alltej/apps/employeemapping/EmployeeMappingApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/alltej/apps/MultiplicationTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/alltej/apps/MultiplicationTable2.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/MultiplicationTableApp.txt" />
       </list>
     </option>
   </component>
@@ -348,12 +333,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept">
+  <component name="RunManager" selected="Application.MultiplicationTable2">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
+    </configuration>
+    <configuration name="MultiplicationTable2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.alltej.apps.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.alltej.apps.MultiplicationTable2" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="demo-java-api" />
+      <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -469,31 +473,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_stream_api" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="junit5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="demo-java-api" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="junit5" />
-      <option name="MAIN_CLASS_NAME" value="junit5.EmployeeDepartmentTests_180315" />
-      <option name="METHOD_NAME" value="group_employees_by_department_then_forEach_with_stream_api" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -556,18 +535,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_lambda" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_stream_api" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_salaries_by_dept" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_average_salary_by_dept" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_salaries_by_dept" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_average_salary_by_dept" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MultiplicationTable2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_average_salary_by_dept" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_salaries_by_dept" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_lambda" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_stream_api" />
+        <item index="0" class="java.lang.String" itemvalue="Application.MultiplicationTable2" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_average_salary_by_dept" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.compute_salaries_by_dept" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeDepartmentTests_180315.group_employees_by_department_then_forEach_with_lambda" />
       </list>
     </recent_temporary>
   </component>
@@ -596,7 +575,7 @@
       <workItem from="1520518205308" duration="3743000" />
       <workItem from="1520543856519" duration="7953000" />
       <workItem from="1521060802027" duration="12718000" />
-      <workItem from="1521203414215" duration="880000" />
+      <workItem from="1521203414215" duration="1196000" />
     </task>
     <task id="LOCAL-00001" summary="Added MapConversionApp - transform Map to different Map structure">
       <created>1520349895735</created>
@@ -626,13 +605,17 @@
       <option name="project" value="LOCAL" />
       <updated>1521173889340</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="compute sum and average - IntSummaryStatistics,DoubleSummaryStatistics">
+      <created>1521205271750</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1521205271750</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="EmployeeDepartmentTests_180315_compute_average_salary_by_dept - 2018.03.16 at 00h 04m 04s.xml">
-      <configuration name="EmployeeDepartmentTests_180315.compute_average_salary_by_dept" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="EmployeeDepartmentTests_180315_compute_average_salary_by_dept - 2018.03.16 at 00h 09m 23s.xml">
       <configuration name="EmployeeDepartmentTests_180315.compute_average_salary_by_dept" configurationId="JUnit" />
     </history-entry>
@@ -646,6 +629,9 @@
       <configuration name="EmployeeDepartmentTests_180315.compute_salaries_by_dept" configurationId="JUnit" />
     </history-entry>
     <history-entry file="EmployeeDepartmentTests_180315_compute_total_and_average_salary_by_dept - 2018.03.16 at 00h 15m 37s.xml">
+      <configuration name="EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="EmployeeDepartmentTests_180315_compute_total_and_average_salary_by_dept - 2018.03.16 at 09h 03m 25s.xml">
       <configuration name="EmployeeDepartmentTests_180315.compute_total_and_average_salary_by_dept" configurationId="JUnit" />
     </history-entry>
     <history-entry file="EmployeeDepartmentTests_180315_group_employees_by_department_then_forEach_with_lambda - 2018.03.15 at 23h 29m 09s.xml">
@@ -662,7 +648,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36422000" />
+    <option name="totallyTimeSpent" value="36738000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3866" height="2106" extended-state="6" />
@@ -675,7 +661,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28859526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2880979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.109144546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -727,17 +713,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alltej/apps/sitemapping/DbRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#597#598#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/junit5/MapTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2607">
@@ -1017,14 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/EmployeeDepartmentTestsTemplate.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1460">
-          <caret line="47" column="66" lean-forward="false" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/alltej/models/Department.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1074,14 +1041,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/alltej/apps/MultiplicationTable2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1142,6 +1101,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/MultiplicationTableAppTemplate.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="82" lean-forward="false" selection-start-line="12" selection-start-column="82" selection-end-line="12" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/alltej/apps/MultiplicationTable2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/EmployeeDepartmentTestsTemplate.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="942">
+          <caret line="47" column="66" lean-forward="false" selection-start-line="47" selection-start-column="66" selection-end-line="47" selection-end-column="66" />
           <folding />
         </state>
       </provider>
