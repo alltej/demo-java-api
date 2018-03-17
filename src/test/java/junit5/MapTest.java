@@ -2,8 +2,11 @@ package junit5;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
+
+import static java.util.Arrays.asList;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author Allan Tejano
@@ -18,7 +21,7 @@ public class MapTest {
     }
 
     @Test
-    public void testHeterogeneousMap() {
+    public void testHeterogeneousMap_cast_throws_excpetion() {
         Map heterogeneousMap = new HashMap();
         heterogeneousMap.put("Hmm", "Well");
         heterogeneousMap.put(1, 2);
@@ -27,24 +30,14 @@ public class MapTest {
         //Doesn't check if map contains only Strings
         @SuppressWarnings("unchecked")
         Map<String, String> map = (Map<String, String>) heterogeneousMap;
-        iterateMapKeysAsStrings(map);
+        assertThrows(ClassCastException.class, () -> {
+            iterateMapKeysAsStrings(map);
+        });
     }
 
+    //TODO
     @Test
-    public void testHeterogeneousMap_withCastOf() {
-        Map heterogeneousMap = new HashMap();
-        heterogeneousMap.put("Hmm", "Well");
-        heterogeneousMap.put(1, 2);
-
-        //Unsafe, will fail later when accessing 2nd entry
-        //Doesn't check if map contains only Strings
-        @SuppressWarnings("unchecked")
-        Map<String, String> map = (Map<String, String>) heterogeneousMap;
-        iterateMapKeysAsStrings(map);
-    }
-
-    @Test
-    public void testHomogeneousMap() {
+    public void testHomogeneousMap_throws_exception() {
         Map homogeneousMap = new HashMap();
         homogeneousMap.put("Hmm", "Well");
         homogeneousMap.put(1, 2);
@@ -55,9 +48,71 @@ public class MapTest {
 //        iterateMapKeysAsStrings(simpleCastMap);
 
         //Succeeds properly after checking each item is an instance of a String
-        Map<String, String> safeCastMap = castToMapOf(String.class, String.class, homogeneousMap);
-        iterateMapKeysAsStrings(safeCastMap);
+        assertThrows( ClassCastException.class, () ->{
+            castToMapOf(String.class, String.class, homogeneousMap);
+
+        } );
+
+        assertThrows(ClassCastException.class, () -> {
+            Map<String, String> safeCastMap = castToMapOf(String.class, String.class, homogeneousMap);
+            iterateMapKeysAsStrings(safeCastMap);
+        });
+
     }
+
+    @Test public void map_null_key_does_not_throw_exception() {
+        Map<Integer, String> map = new HashMap<>(  );
+        map.put( null, "null" );
+        map.put( 1, "1_b" );
+        assertEquals(2, map.entrySet().size());
+        map.entrySet().stream().forEach( e -> {
+            System.out.println(e.getKey() + "::" + e.getValue());
+        } );
+    }
+
+    @Test public void map_duplicate_key_does_not_throw_exception() {
+        Map<Integer, String> map = new HashMap<>(  );
+        map.put( 1, "1_a" );
+        map.put( 1, "1_b" );
+        assertEquals(1, map.entrySet().size());
+        map.entrySet().stream().forEach( e -> {
+            System.out.println(e.getKey() + "::" + e.getValue());
+        } );
+    }
+
+    @Test public void map_duplicate_key_replaced_old_key_value() {
+        Map<Integer, String> map = new HashMap<>(  );
+        map.put( 1, "1a" );
+        map.put( 1, "1b" );
+        assertEquals("1b", map.entrySet().stream().filter( e -> e.getKey().equals( 1 ) ).map( e -> e.getValue() ).findFirst().get());
+        map.entrySet().stream().forEach( e -> {
+            System.out.println(e.getKey() + "::" + e.getValue());
+        } );
+    }
+
+
+    @Test public void map_null_key_stream_filter_by_null_key_throws_exception() {
+        Map<Integer, String> map = new HashMap<>(  );
+        map.put( null, "null" );
+        map.put( 1, "1_a" );
+
+        try {
+            Optional<Integer> s = map.entrySet().stream()
+                    .map( e -> e.getKey() )
+                    .filter( Objects::isNull).findFirst();
+            fail( "should throw exception" );
+        } catch ( Exception e ) {
+        }
+    }
+
+    @Test public void list_remove_duplicate_by_stream_using_distinct() {
+        List<String> list = asList( "AA", "BB", "CC", "AA", "DD", "BB", "EE", "CC" );
+        List<String> distinc = list.stream().distinct().collect( Collectors.toList() );
+        assertEquals( 5, distinc.size() );
+        distinc.forEach( System.out::println );
+
+    }
+
 
     /** Check all contained items are claimed types and fail early if they aren't */
     public static <K, V> Map<K, V> castToMapOf(
