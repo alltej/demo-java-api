@@ -2,22 +2,15 @@ package com.alltej.apps.sitemapping;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
 
-/**
- * @author Allan Tejano
- * 4/9/2018
- */
-public class MapConversionApp_180409 {
+public class MapConversionApp {
     public static void main( String[] args ) {
-        Collection<DbRecord> records = asList(
+        Collection<DbRecord> records = asList( 
                 new DbRecord( LocalDateTime.of(2018, 1, 1, 1,1,1), BigDecimal.valueOf( 111.11 ), "site1" ),
                 new DbRecord( LocalDateTime.of(2018, 1, 1, 1,2,2), BigDecimal.valueOf( 122.22 ), "site1" ),
                 new DbRecord( LocalDateTime.of(2018, 1, 1, 1,3,3), BigDecimal.valueOf( 133.33 ), "site1" ),
@@ -27,7 +20,7 @@ public class MapConversionApp_180409 {
                 new DbRecord( LocalDateTime.of(2018, 1, 1, 3,4,4), BigDecimal.valueOf( 344.44 ), "site3" ),
                 new DbRecord( LocalDateTime.of(2018, 1, 1, 3,5,5), BigDecimal.valueOf( 355.55 ), "site3" ),
                 new DbRecord( LocalDateTime.of(2018, 1, 1, 3,6,6), BigDecimal.valueOf( 366.66 ), "site3" )
-        );
+                );
 
         SiteValues sv = convertResults( records );
         sv.getSiteToValues().entrySet().forEach( stv ->  {
@@ -40,15 +33,7 @@ public class MapConversionApp_180409 {
 
     /* Convert to map of sites with List of Measurements for that site*/
     public static SiteValues convertResults(Collection<DbRecord> records) {
-        Map<String, List<DbRecord>> recordsBySites = records.stream().collect( Collectors.groupingBy( DbRecord::getSiteName ) );
-
-        Map<String, List<Meaurement>> sitesWMeasurements = new HashMap<>();
-        recordsBySites.entrySet().stream()
-                .forEach( s -> {
-                    List<Meaurement> m = s.getValue().stream().map( d -> new Meaurement( d.getTime(), d.getValue() ) )
-                            .collect( Collectors.toList() );
-                    sitesWMeasurements.put( s.getKey(), m );
-                } );
-        return new SiteValues( sitesWMeasurements );
+        return null;
     }
+
 }
