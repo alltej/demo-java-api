@@ -40,6 +40,11 @@ public class EmployeeDepartmentTests {
     @Test public void compute_salaries_by_dept() {
     }
 
+    // get Map of Department and Employee with max salary
+    @Test public void get_employee_w_max_salary_by_dept() {
+    }
+
+
     // Compute average of salaries by department
     @Test public void compute_average_salary_by_dept() {
     }
