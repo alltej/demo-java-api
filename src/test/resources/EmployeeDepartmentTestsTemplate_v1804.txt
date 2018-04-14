@@ -48,4 +48,13 @@ public class EmployeeMappingApp_180411 {
 
     @Test public void get_salary_stats_by_dept() {
     }
+
+    @Test public void sort_employee_by_salary_using_lambda() {
+    }
+
+    @Test public void sort_employee_by_salary_using_comparator() {
+    }
+
+    @Test public void sort_employee_by_age_then_salary_using_comparator() {
+    }
 }

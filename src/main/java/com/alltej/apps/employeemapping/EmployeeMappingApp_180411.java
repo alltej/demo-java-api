@@ -4,10 +4,7 @@ import com.alltej.models.Department;
 import com.alltej.models.Employee;
 import org.junit.jupiter.api.Test;
 
-import java.util.Collection;
-import java.util.IntSummaryStatistics;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
@@ -30,6 +27,7 @@ public class EmployeeMappingApp_180411 {
             Employee.of( "PR-B", 24, "F", DepartmentPayroll, 65 ),
             Employee.of( "IT-A", 31, "M", DepartmentIT, 70 ),
             Employee.of( "IT-B", 32, "F", DepartmentIT, 75 ),
+            Employee.of( "IT-C", 32, "M", DepartmentIT, 80 ),
             Employee.of( "CP-A", 41, "M", DepartmentCompliance, 80 ),
             Employee.of( "CP-B", 42, "F", DepartmentCompliance, 85 )
     );
@@ -75,4 +73,24 @@ public class EmployeeMappingApp_180411 {
                 Collectors.groupingBy( Employee::getDepartment, Collectors.summarizingInt( Employee::getSalary ) ) );
         collect.entrySet().forEach( c -> System.out.println(c.getKey().getName() + "::" + c.getValue()) );
     }
+
+    @Test public void sort_employee_by_salary_using_lambda() {
+        List<Employee> collect = ee.stream().sorted( ( e1, e2 ) -> e1.getSalary().compareTo( e2.getSalary() ) )
+                .collect( toList() );
+        collect.forEach( System.out::println );
+
+    }
+
+    @Test public void sort_employee_by_salary_using_comparator() {
+        List<Employee> collect = ee.stream().sorted( Comparator.comparing( Employee::getSalary ) )
+                .collect( toList() );
+        collect.forEach( System.out::println );
+    }
+
+    @Test public void sort_employee_by_age_then_salary_using_comparator() {
+        List<Employee> collect = ee.stream().sorted( Comparator.comparing( Employee::getAge ).thenComparing( Employee::getSalary) )
+                .collect( toList() );
+        collect.forEach( System.out::println );
+    }
+
 }
