@@ -36,4 +36,9 @@ public class Employee implements Comparable<Employee> {
         employee.setSalary( salary );
         return employee;
     }
+
+    @Override public String toString() {
+        return "Employee{" + "name='" + name + '\'' + ", age=" + age + ", gender='" + gender + '\'' + ", department="
+                + department.getName() + ", salary=" + salary + '}';
+    }
 }

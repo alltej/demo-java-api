@@ -20,4 +20,8 @@ public class Department {
     public static  Department of( Integer departmentId, String name ) {
         return new Department( departmentId, name );
     }
+
+    @Override public String toString() {
+        return "Department{" + "name='" + name + '\'' + '}';
+    }
 }
