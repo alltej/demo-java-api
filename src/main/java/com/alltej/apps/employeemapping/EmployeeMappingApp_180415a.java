@@ -4,10 +4,7 @@ import com.alltej.models.Department;
 import com.alltej.models.Employee;
 import org.junit.jupiter.api.Test;
 
-import java.util.Collection;
-import java.util.IntSummaryStatistics;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
@@ -15,9 +12,9 @@ import static java.util.stream.Collectors.toList;
 
 /**
  * @author Allan Tejano
- * 4/11/2018
+ * 4/15/2018
  */
-public class EmployeeMappingApp_180411 {
+public class EmployeeMappingApp_180415a {
     private static final Department DepartmentHR = Department.of( 1, "HR" );
     private static final Department DepartmentPayroll = Department.of( 2, "Payroll" );
     private static final Department DepartmentIT = Department.of( 3, "IT" );
@@ -42,9 +39,21 @@ public class EmployeeMappingApp_180411 {
     }
 
     @Test public void get_employee_w_max_salary_by_dept() {
+
+        Map<Department, Employee> eeWMaxByDept = EmployeeMappingApp_180415a.ee.stream().collect( Collectors.groupingBy( Employee::getDepartment,
+                Collectors.collectingAndThen(
+                        Collectors.reducing( ( e1, e2 ) -> e1.getSalary() > e2.getSalary() ? e1 : e2 ),
+                        Optional::get ) ) );
+        eeWMaxByDept.entrySet().forEach( e -> {
+            System.out.println(e.getKey().getName() + "::" + e.getValue());
+        } );
     }
 
     @Test public void get_employee_w_max_salary() {
+        Employee eeMaxSal = ee.stream().collect( Collectors
+                .collectingAndThen( Collectors.reducing( ( e1, e2 ) -> e1.getSalary() > e2.getSalary() ? e1 : e2 ),
+                        Optional::get ) );
+        System.out.println(eeMaxSal);
     }
 
     @Test public void get_salary_stats_by_dept() {
@@ -57,11 +66,19 @@ public class EmployeeMappingApp_180411 {
     }
 
     @Test public void sort_employee_by_age_then_salary_using_comparator() {
+        ee.stream().sorted( Comparator.comparing( Employee::getAge ).thenComparing( Employee::getSalary ) )
+            .forEach( System.out::println );
     }
 
     @Test public void sort_employee_by_name() {
+        ee.stream().sorted( Comparator.comparing( Employee::getAge ) ).forEach( System.out::println );
     }
 
     @Test public void reverse_list() {
+        ee.stream().collect( Collectors.collectingAndThen( Collectors.toList(),
+                l-> {
+                    Collections.reverse( l );
+                    return l;
+                }) ).forEach( System.out::println );
     }
 }

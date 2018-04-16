@@ -8,15 +8,13 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.summarizingInt;
-import static java.util.stream.Collectors.summingInt;
 import static java.util.stream.Collectors.toList;
 
 /**
  * @author Allan Tejano
  * 4/15/2018
  */
-public class EmployeeMappingApp_180415 {
+public class EmployeeMappingApp_180416 {
     private static final Department DepartmentHR = Department.of( 1, "HR" );
     private static final Department DepartmentPayroll = Department.of( 2, "Payroll" );
     private static final Department DepartmentIT = Department.of( 3, "IT" );
@@ -34,62 +32,46 @@ public class EmployeeMappingApp_180415 {
             Employee.of( "CP-B", 42, "F", DepartmentCompliance, 85 )
     );
 
-
     @Test public void group_employees_by_department_then_list_employees_by_dept() {
-        ee.stream().collect( Collectors.groupingBy( Employee::getDepartment, toList()) )
-            .entrySet().forEach( e -> {
-            System.out.println(e.getKey().getName());
-            System.out.println("==============");
-            //e.getValue().stream().map( Employee::getName).collect( toList() ).forEach( System.out::println );
-            e.getValue().forEach( h -> {
-                System.out.println( h );
-            } );
-        } );
-
-        ;
     }
 
     @Test public void get_total_salary_by_dept() {
-        Map<Department, Integer> collect = ee.stream()
-                .collect( Collectors.groupingBy( Employee::getDepartment, summingInt( Employee::getSalary ) ) );
-        collect.entrySet().forEach( d -> {
-            System.out.println(d.getKey().getName() + "::" + d.getValue());
+        ee.stream().collect(
+                Collectors.groupingBy( Employee::getDepartment, Collectors.summingInt( Employee::getSalary ) ) )
+                .entrySet().forEach( c -> {
+            System.out.println(c.getKey().getName() + "::" + c.getValue());
         } );
+        ;
     }
 
     @Test public void get_employee_w_max_salary_by_dept() {
-        Map<Department, Employee> collect = ee.stream().collect( Collectors.groupingBy( Employee::getDepartment,
-                Collectors.collectingAndThen( Collectors
-                                .reducing( ( Employee e1, Employee e2 ) -> e1.getSalary() > e2.getSalary() ? e1 : e2 ),
+
+        Map<Department, Employee> eeWMaxByDept = EmployeeMappingApp_180416.ee.stream().collect( Collectors.groupingBy( Employee::getDepartment,
+                Collectors.collectingAndThen(
+                        Collectors.reducing( ( e1, e2 ) -> e1.getSalary() > e2.getSalary() ? e1 : e2 ),
                         Optional::get ) ) );
-        collect.entrySet().forEach( e -> {
+        eeWMaxByDept.entrySet().forEach( e -> {
             System.out.println(e.getKey().getName() + "::" + e.getValue());
-            //System.out.println(e.getKey().getName() + "::" + e.getValue().getName());
         } );
     }
 
     @Test public void get_employee_w_max_salary() {
-        Employee employee = ee.stream().collect( Collectors.collectingAndThen(
-                Collectors.reducing( ( Employee e1, Employee e2 ) -> e1.getSalary() > e2.getSalary() ? e1 : e2 ),
-                Optional::get ) );
+        Employee employee = ee.stream().collect( Collectors
+                .collectingAndThen( Collectors.reducing( ( e1, e2 ) -> e1.getSalary() > e2.getSalary() ? e1 : e2 ),
+                        Optional::get ) );
         System.out.println(employee);
     }
 
     @Test public void get_salary_stats_by_dept() {
-        Map<Department, IntSummaryStatistics> collect = ee.stream()
-                .collect( Collectors.groupingBy( Employee::getDepartment, summarizingInt( Employee::getSalary ) ) );
-        collect.entrySet().forEach( System.out::println );
     }
 
     @Test public void sort_employee_by_salary_using_lambda() {
-        List<Employee> collect = ee.stream().sorted( ( e1, e2 ) -> e1.getSalary().compareTo( e2.getSalary() ) )
-                .collect( toList() );
-        collect.forEach( System.out::println );
-
     }
 
     @Test public void sort_employee_by_salary_using_comparator() {
-        ee.stream().sorted( Comparator.comparing( Employee::getSalary ) ).collect( toList() ).forEach( System.out::println );
+        ee.stream().sorted( Comparator.comparing( Employee::getSalary ) ).collect( toList() )
+            .forEach( System.out::println);
+        ;
     }
 
     @Test public void sort_employee_by_age_then_salary_using_comparator() {
@@ -98,6 +80,39 @@ public class EmployeeMappingApp_180415 {
     }
 
     @Test public void sort_employee_by_name() {
-        ee.stream().sorted( Comparator.comparing( Employee::getName ) ).forEach( System.out::println );
+        ee.stream().sorted( Comparator.comparing( Employee::getName ) ).collect( toList() )
+            .forEach( System.out::println );
+        ;
+    }
+
+    @Test public void reverse_list() {
+        List<Employee> list = ee.stream().collect( Collectors.collectingAndThen( Collectors.toList(), l -> {
+            Collections.reverse( l );
+            return l;
+        } ) );
+        list.forEach( System.out::println );
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @Test public void reverse_list_2() {
+        ee.stream().collect( Collectors.collectingAndThen( Collectors.toList(), l ->
+        {
+            Collections.reverse( l );
+            return l;
+        }) ).forEach( System.out::println );
     }
 }
