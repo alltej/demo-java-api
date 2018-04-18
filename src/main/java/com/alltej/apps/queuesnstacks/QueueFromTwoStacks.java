@@ -1,4 +1,4 @@
-package com.alltej.apps.employeemapping;
+package com.alltej.apps.queuesnstacks;
 
 import java.util.Stack;
 
