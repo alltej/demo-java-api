@@ -5,42 +5,6 @@ import org.junit.jupiter.api.Test;
 import java.util.*;
 import java.util.stream.Collectors;
 
-/**
- * @author Allan Tejano
- * 4/16/2018
- */
-class Flight {
-    private String flightId;
-    private String airline;
-    private int cost;
-
-    public String getFlightId() {
-        return flightId;
-    }
-
-    public void setFlightId( String flightId ) {
-        this.flightId = flightId;
-    }
-
-    public int getCost() {
-        return cost;
-    }
-
-    public void setCost( int cost ) {
-        this.cost = cost;
-    }
-
-    public Flight( String flightId, int cost, String airline ) {
-        this.flightId = flightId;
-        this.cost = cost;
-        this.airline = airline;
-    }
-
-    @Override public String toString() {
-        return "Flight{" + "flightId='" + flightId + '\'' + ", airline='" + airline + '\'' + ", cost=" + cost + '}';
-    }
-}
-
 public class CheapestFlight {
 
     List<Flight> flights =  Arrays.asList(new Flight("F2G", 35, "UA"),
