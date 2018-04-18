@@ -2,10 +2,7 @@ package junit5.datastructures;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Comparator;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -67,5 +64,20 @@ public class TreeMapTest {
 
         Set<Integer> keysEqOrGreaterThan2 = map.tailMap( 3 ).keySet();
         assertEquals( "[3, 4, 5, 6, 7, 8]", keysEqOrGreaterThan2.toString());
+    }
+
+    @Test public void convert_hashmap_to_treemap() {
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put( 8, "eight" );
+        map.put( 1, "one" );
+        map.put( 3, "three" );
+        map.put( 2, "two" );
+        map.put( 6, "six" );
+        map.put( 4, "four" );
+        map.put( 5, "five" );
+        map.put( 7, "seven" );
+        TreeMap<Integer, String> treeMap = new TreeMap<>( map );
+        assertEquals( "six", treeMap.get( 6 ) );
+        treeMap.entrySet().forEach( t -> System.out.println( t.getKey() ) );
     }
 }
