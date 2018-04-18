@@ -1,5 +1,7 @@
 package junit5.datastructures;
 
+import java.time.LocalDateTime;
+
 /**
  * @author Allan Tejano
  * 4/18/2018
@@ -29,6 +31,7 @@ public class BinaryTreePreOrder {
     }
 
     public static void main( String[] args ) {
+        System.out.println( LocalDateTime.now());
         TreeNode n10 = new TreeNode(10, null, null);
         TreeNode n30 = new TreeNode(30, null, null);
         TreeNode n20 = new TreeNode(20, n10, n30);
