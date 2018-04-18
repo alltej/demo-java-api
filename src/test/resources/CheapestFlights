@@ -56,28 +56,9 @@ public class CheapestFlight {
             new Flight("C2N", 79, "DELTA"));
 
     @Test public void cheapest_flight_by_flight_id() {
-        Map<String, List<Flight>> flightsById = flights.stream()
-                .collect( Collectors.groupingBy( Flight::getFlightId, Collectors.toList() ) );
-        Map<String, Flight> cflights = new HashMap<>();
-        flightsById.entrySet().stream().forEach( f -> {
-            Flight flight = f.getValue().stream().collect( Collectors
-                    .collectingAndThen( Collectors.reducing( ( f1, f2 ) -> f1.getCost() > f2.getCost() ? f2 : f1 ),
-                            Optional::get ) );
-            cflights.put( f.getKey(), flight );
-        } );
-        cflights.entrySet().stream().forEach( s ->{
-            System.out.println(s.toString());
-        } );
     }
 
     @Test public void stats_by_flight_id() {
-        Map<String, IntSummaryStatistics> collect = flights.stream()
-                .collect( Collectors.groupingBy( Flight::getFlightId, Collectors.summarizingInt( Flight::getCost ) ) );
-        collect.entrySet().forEach( c -> {
-            System.out.println(c.getKey());
-            System.out.println(c.getValue());
-            System.out.println("***********");
-        } );
     }
 
 }
