@@ -6,7 +6,7 @@ package com.alltej.apps.patterns;
  */
 public class ThreadSafeSingleton {
 
-    private static ThreadSafeSingleton instance;
+    private static volatile ThreadSafeSingleton instance;
 
     private String message;
     private ThreadSafeSingleton() {
