@@ -1,12 +1,10 @@
-package com.alltej.apps;
-import java.time.LocalDateTime;
+package com.alltej.apps.pandor;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.*;
 
 /**
  * @author Allan Tejano
@@ -38,13 +36,25 @@ public class PandoraApp {
         return null;
     }
 
+//    static Integer firstElementThatAppearsNTimes_usingMapMerge(List<Integer> list, Integer nTimes) {
+//        Map<Integer, Integer> map = new HashMap<>();
+//        for ( Integer i : list ) {
+//            map.merge( i, 1, ( o, n ) -> o + n );
+//            Integer times = map.get( i );
+//            if (times == nTimes)
+//                return i;
+//        }
+//        return null;
+//    }
+//
     static Integer firstElementThatAppearsNTimes_usingMapMerge(List<Integer> list, Integer nTimes) {
-        Map<Integer, Integer> map = new HashMap<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
         for ( Integer i : list ) {
-            map.merge( i, 1, ( o, n ) -> o + n );
+            map.merge( i, 1, ( o, n ) -> o + 1 );
             Integer times = map.get( i );
-            if (times == nTimes)
+            if (times == nTimes) {
                 return i;
+            }
         }
         return null;
     }

@@ -1,4 +1,4 @@
-package com.alltej.apps;
+package com.alltej.apps.cox;
 
 import org.junit.jupiter.api.Test;
 
