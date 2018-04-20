@@ -42,4 +42,9 @@ public class CodMttlApp {
         int n = findElementWithMaxCount( asList( 1,1,1,1,1,11,1,1,1,1,12,2,2,2,2,2,3,3,3,3,3,1,1,1,1,1) );
         assertEquals( 1, n );
     }
+
+    @Test public void another_example2() {
+        int n = findElementWithMaxCount( asList( 1, 2, 2, 3, 4, 1, 5, 6, 3, 4, 2 ) );
+        assertEquals( 2, n );
+    }
 }
