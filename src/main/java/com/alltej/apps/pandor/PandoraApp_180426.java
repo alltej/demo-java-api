@@ -1,19 +1,20 @@
-package com.alltej.apps.pandora;
-
+package com.alltej.apps.pandor;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.stream.IntStream;
 
 import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 /**
  * @author Allan Tejano
- * 4/19/2018
+ * 4/26/2018
  */
-public class PandoraApp_180419 {
+public class PandoraApp_180426 {
 
     // Write a method that takes two parameters: a list of integers, and a single integer n, and returns
     // the first element in the list that appears n times.  For example
@@ -38,6 +39,12 @@ public class PandoraApp_180419 {
 
     private Integer firstElementThatAppearsNTimes_usingMapMerge(List<Integer> list, Integer nTimes) {
         //write code here
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (Integer i: list) {
+            Integer count = map.merge( i, 1, ( o, n ) -> o + n );
+            if (count.equals( nTimes )) return i;
+        } ;
+
         return null;
     }
 
@@ -71,14 +78,22 @@ public class PandoraApp_180419 {
 
         List<Integer> mins = new ArrayList<>();
         //code here
+        IntStream.of( nums )
+                .sorted().limit( firstN ).forEach( n ->{
+            mins.add( n );
+        } );
         return mins;
     }
 
     public List<Integer> findFirstNMaxInts(int[] nums, int firstN) {
 
-        List<Integer> mins = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
         //code here
-
-        return mins;
+        IntStream.of(nums).boxed().sorted( Comparator.reverseOrder() )
+                .limit( firstN )
+                .forEach( n ->{
+                    list.add( n );
+                } );
+        return list;
     }
 }
