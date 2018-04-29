@@ -51,11 +51,111 @@ public class Bst {
         return list;
     }
 
-    //    private Node getNodeWithMinValue( Node currNode ) {
-//        if (root == null) return root;
-//        while ( root.getLeft() != null ) {
-//            getNodeWithMinValue( root.getLeft() );
-//        }
-//        return root;
-//    }
+    public List<Node> findInOrderTraversal() {
+
+        ArrayList<Node> list = new ArrayList<>();
+        Node currNode = root;
+        //list.add( currNode );
+        doInOrderTraversal( currNode, list );
+        return  list;
+    }
+
+    private void doInOrderTraversal( Node currNode, List<Node> list ) {
+        if (currNode == null) {
+            return;
+        };
+        System.out.println(currNode.getValue() + ",");
+        list.add( currNode );
+        doInOrderTraversal( currNode.getLeft(), list );
+        doInOrderTraversal( currNode.getRight(), list );
+    }
+
+    public void insertNode( int i ) {
+        Node node = new Node( i );
+
+        if (root == null) {
+            root = node;
+            return;
+        }
+        insertNewNode( root,  node );
+    }
+
+    private void insertNewNode( Node parentNode, Node node ) {
+
+        if (parentNode.getValue() > node.getValue()) {
+            if (parentNode.getLeft() == null) {
+                parentNode.setLeft( node );
+                return;
+            }else{
+                insertNewNode( parentNode.getLeft(), node );
+            }
+        }
+        else{
+            if (parentNode.getRight() == null) {
+                parentNode.setRight( node );
+                return;
+            } else {
+                insertNewNode( parentNode.getRight(), node );
+            }
+        }
+
+    }
+
+    public void printPreOrder() {
+        printPreOrderRec(root);
+        System.out.println("");
+    }
+
+    /**
+     * Helper method to recursively print the contents in a Preorder way
+     */
+    private void printPreOrderRec(Node currRoot) {
+        if (currRoot == null) {
+            return;
+        }
+        System.out.print(currRoot.getValue() + ", ");
+        printPreOrderRec(currRoot.getLeft());
+        printPreOrderRec(currRoot.getRight());
+    }
+
+    /**
+     * Printing the contents of the tree in an inorder way.
+     */
+    public void printInorder(){
+        printInOrderRec(root);
+        System.out.println("");
+    }
+
+    /**
+     * Helper method to recursively print the contents in an inorder way
+     */
+    private void printInOrderRec(Node currRoot){
+        if ( currRoot == null ){
+            return;
+        }
+        printInOrderRec(currRoot.getLeft());
+        System.out.print(currRoot.getValue()+", ");
+        printInOrderRec(currRoot.getRight());
+    }
+
+    /**
+     * Printing the contents of the tree in a Postorder way.
+     */
+    public void printPostOrder() {
+        printPostOrderRec(root);
+        System.out.println("");
+    }
+
+    /**
+     * Helper method to recursively print the contents in a Postorder way
+     */
+    private void printPostOrderRec(Node currRoot) {
+        if (currRoot == null) {
+            return;
+        }
+        printPostOrderRec(currRoot.getLeft());
+        printPostOrderRec(currRoot.getRight());
+        System.out.print(currRoot.getValue() + ", ");
+
+    }
 }
