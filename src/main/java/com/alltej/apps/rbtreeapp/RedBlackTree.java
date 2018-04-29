@@ -27,6 +27,7 @@ import java.util.concurrent.atomic.AtomicReference;
  */
 public class RedBlackTree {
 
+    private RedBlackNode currentRoot;
     /**
      * Main insert method of red black tree.
      */
@@ -137,12 +138,16 @@ public class RedBlackTree {
         }
     }
 
-    private RedBlackNode insertNoParent(RedBlackNode root, int data) {
-        if(root  == null || root.isNullLeaf) {
-            //if parent is not null means tree is not empty
-            //so create a red leaf node
-            return RedBlackNode.createBlackNode(data);
+    private RedBlackNode insertNoParent(final RedBlackNode root, int data) {
+        if (currentRoot == null) {
+            currentRoot = RedBlackNode.createBlackNode(data);
+            return currentRoot;
         }
+//        if(root  == null || root.isNullLeaf) {
+//            //if parent is not null means tree is not empty
+//            //so create a red leaf node
+//            return RedBlackNode.createBlackNode(data);
+//        }
 
         //duplicate insertion is not allowed for this tree.
         if(root.data == data) {
@@ -202,7 +207,7 @@ public class RedBlackTree {
                         //is new root of this subtree.
                         rightRotate(root.left, false);
                         //after rotation root should be root's parent
-                        root = root.parent;
+                        currentRoot = root.parent;
                         //then do left rotate with change of color
                         leftRotate(root, true);
                     }
@@ -229,7 +234,7 @@ public class RedBlackTree {
                         leftRotate(root, true);
                     } else {
                         leftRotate(root.right, false);
-                        root = root.parent;
+                        currentRoot = root.parent;
                         rightRotate(root, true);
                     }
                 } else {
@@ -241,7 +246,7 @@ public class RedBlackTree {
                 }
             }
         }
-        return root;
+        return currentRoot;
     }
 
     private RedBlackNode insert( RedBlackNode parent, RedBlackNode root, int data) {
