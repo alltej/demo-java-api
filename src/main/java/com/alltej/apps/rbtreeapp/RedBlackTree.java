@@ -32,13 +32,13 @@ public class RedBlackTree {
      * Main insert method of red black tree.
      */
 //    public RedBlackNode insert( RedBlackNode root, int data) {
-//        return insertNoParent( data);
+//        return insertData( data);
 //    }
 
     /**
      * Main delete method of red black tree.
      */
-    public RedBlackNode deleteNoParent( int data) {
+    public RedBlackNode removeData( int data) {
         final RedBlackNode root = currentRoot;
         AtomicReference<RedBlackNode> rootReference = new AtomicReference<>();
         delete(root, data, rootReference);
@@ -62,9 +62,8 @@ public class RedBlackTree {
     /**
      * Main print method of red black tree.
      */
-    public void printRedBlackTree( RedBlackNode root) {
+    public void printFromRoot() {
         printRedBlackTree(currentRoot, 0);
-        //printRedBlackTree(root, 0);
     }
 
     /**
@@ -166,10 +165,10 @@ public class RedBlackTree {
         }
     }
 
-    public RedBlackNode insertNoParent(int data) {
+    public void insertData(int data) {
         if (currentRoot == null) {
             currentRoot = RedBlackNode.createBlackNode(data);
-            return currentRoot;
+            return;// currentRoot;
         }
 
         final RedBlackNode root = currentRoot;
@@ -187,7 +186,7 @@ public class RedBlackTree {
             //so that nodes at upper level can set their
             //child correctly
             if(left == root.parent) {
-                return left;
+                return;// left;
             }
             //set the left child returned to be left of root node
             root.left = left;
@@ -200,7 +199,7 @@ public class RedBlackTree {
             //so that nodes at upper level can set their
             //child correctly
             if(right == root.parent) {
-                return right;
+                return;// right;
             }
             //set the right child returned to be right of root node
             root.right = right;
@@ -215,7 +214,7 @@ public class RedBlackTree {
 
         }
         //return currentRoot;
-        return null;
+        //return null;
     }
 
     private void doRight( RedBlackNode root ) {
