@@ -38,6 +38,17 @@ public class RedBlackTree {
     /**
      * Main delete method of red black tree.
      */
+    public RedBlackNode deleteNoParent( int data) {
+        final RedBlackNode root = currentRoot;
+        AtomicReference<RedBlackNode> rootReference = new AtomicReference<>();
+        delete(root, data, rootReference);
+        if(rootReference.get() == null) {
+            return root;
+        } else {
+            return rootReference.get();
+        }
+    }
+
     public RedBlackNode delete( RedBlackNode root, int data) {
         AtomicReference<RedBlackNode> rootReference = new AtomicReference<>();
         delete(root, data, rootReference);
@@ -52,12 +63,29 @@ public class RedBlackTree {
      * Main print method of red black tree.
      */
     public void printRedBlackTree( RedBlackNode root) {
-        printRedBlackTree(root, 0);
+        printRedBlackTree(currentRoot, 0);
+        //printRedBlackTree(root, 0);
     }
 
     /**
      * Main validate method of red black tree.
      */
+    public boolean validateRedBlackTreeDefault() {
+        final  RedBlackNode root = currentRoot;
+        if(root == null) {
+            return true;
+        }
+        //check if root is black
+        if(root.color != RedBlackNode.Color.BLACK) {
+            System.out.print("Root is not black");
+            return false;
+        }
+        //Use of AtomicInteger solely because java does not provide any other mutable int wrapper.
+        AtomicInteger blackCount = new AtomicInteger(0);
+        //make sure black count is same on all path and there is no red red relationship
+        return checkBlackNodesCount(root, blackCount, 0) && noRedRedParentChild(root, RedBlackNode.Color.BLACK);
+    }
+
     public boolean validateRedBlackTree( RedBlackNode root) {
 
         if(root == null) {
@@ -143,11 +171,6 @@ public class RedBlackTree {
             currentRoot = RedBlackNode.createBlackNode(data);
             return currentRoot;
         }
-//        if(root  == null || root.isNullLeaf) {
-//            //if parent is not null means tree is not empty
-//            //so create a red leaf node
-//            return RedBlackNode.createBlackNode(data);
-//        }
 
         final RedBlackNode root = currentRoot;
         //duplicate insertion is not allowed for this tree.
@@ -186,69 +209,78 @@ public class RedBlackTree {
         }
 
         if(isLeft) {
-            //if we went to left side check to see Red-Red conflict
-            //between root and its left child
-            if(root.color == RedBlackNode.Color.RED && root.left.color == RedBlackNode.Color.RED) {
-                //get the sibling of root. It is returning optional means
-                //sibling could be empty
-                Optional<RedBlackNode> sibling = findSiblingNode(root);
-                //if sibling is empty or of BLACK color
-                if(!sibling.isPresent() || sibling.get().color == RedBlackNode.Color.BLACK) {
-                    //check if root is left child of its parent
-                    if(isLeftChild(root)) {
-                        //this creates left left situation. So do one right rotate
-                        rightRotate(root, true);
-                    } else {
-                        //this creates left-right situation so do one right rotate followed
-                        //by left rotate
-
-                        //do right rotation without change in color. So sending false.
-                        //when right rotation is done root becomes right child of its left
-                        //child. So make root = root.parent because its left child before rotation
-                        //is new root of this subtree.
-                        rightRotate(root.left, false);
-                        //after rotation root should be root's parent
-                        currentRoot = root.parent;
-                        //then do left rotate with change of color
-                        leftRotate(root, true);
-                    }
-
-                } else {
-                    //we have sibling color as RED. So change color of root
-                    //and its sibling to Black. And then change color of their
-                    //parent to red if their parent is not a root.
-                    root.color = RedBlackNode.Color.BLACK;
-                    sibling.get().color = RedBlackNode.Color.BLACK;
-                    //if parent's parent is not null means parent is not root.
-                    //so change its color to RED.
-                    if(root.parent.parent != null) {
-                        root.parent.color = RedBlackNode.Color.RED;
-                    }
-                }
-            }
+            doLeft( root );
         } else {
-            //this is mirror case of above. So same comments as above.
-            if(root.color == RedBlackNode.Color.RED && root.right.color == RedBlackNode.Color.RED) {
-                Optional<RedBlackNode> sibling = findSiblingNode(root);
-                if(!sibling.isPresent() || sibling.get().color == RedBlackNode.Color.BLACK) {
-                    if(!isLeftChild(root)) {
-                        leftRotate(root, true);
-                    } else {
-                        leftRotate(root.right, false);
-                        currentRoot = root.parent;
-                        rightRotate(root, true);
-                    }
-                } else {
-                    root.color = RedBlackNode.Color.BLACK;
-                    sibling.get().color = RedBlackNode.Color.BLACK;
-                    if(root.parent.parent != null) {
-                        root.parent.color = RedBlackNode.Color.RED;
-                    }
-                }
-            }
+            doRight( root );
+
         }
         //return currentRoot;
         return null;
+    }
+
+    private void doRight( RedBlackNode root ) {
+        //this is mirror case of above. So same comments as above.
+        if(root.color == RedBlackNode.Color.RED && root.right.color == RedBlackNode.Color.RED) {
+            Optional<RedBlackNode> sibling = findSiblingNode(root);
+            if(!sibling.isPresent() || sibling.get().color == RedBlackNode.Color.BLACK) {
+                if(!isLeftChild(root)) {
+                    leftRotate(root, true);
+                } else {
+                    leftRotate(root.right, false);
+                    currentRoot = root.parent;
+                    rightRotate(root, true);
+                }
+            } else {
+                root.color = RedBlackNode.Color.BLACK;
+                sibling.get().color = RedBlackNode.Color.BLACK;
+                if(root.parent.parent != null) {
+                    root.parent.color = RedBlackNode.Color.RED;
+                }
+            }
+        }
+    }
+
+    private void doLeft( RedBlackNode root ) {
+        //if we went to left side check to see Red-Red conflict
+        //between root and its left child
+        if(root.color == RedBlackNode.Color.RED && root.left.color == RedBlackNode.Color.RED) {
+            //get the sibling of root. It is returning optional means
+            //sibling could be empty
+            Optional<RedBlackNode> sibling = findSiblingNode(root);
+            //if sibling is empty or of BLACK color
+            if(!sibling.isPresent() || sibling.get().color == RedBlackNode.Color.BLACK) {
+                //check if root is left child of its parent
+                if(isLeftChild(root)) {
+                    //this creates left left situation. So do one right rotate
+                    rightRotate(root, true);
+                } else {
+                    //this creates left-right situation so do one right rotate followed
+                    //by left rotate
+
+                    //do right rotation without change in color. So sending false.
+                    //when right rotation is done root becomes right child of its left
+                    //child. So make root = root.parent because its left child before rotation
+                    //is new root of this subtree.
+                    rightRotate(root.left, false);
+                    //after rotation root should be root's parent
+                    currentRoot = root.parent;
+                    //then do left rotate with change of color
+                    leftRotate(root, true);
+                }
+
+            } else {
+                //we have sibling color as RED. So change color of root
+                //and its sibling to Black. And then change color of their
+                //parent to red if their parent is not a root.
+                root.color = RedBlackNode.Color.BLACK;
+                sibling.get().color = RedBlackNode.Color.BLACK;
+                //if parent's parent is not null means parent is not root.
+                //so change its color to RED.
+                if(root.parent.parent != null) {
+                    root.parent.color = RedBlackNode.Color.RED;
+                }
+            }
+        }
     }
 
     private RedBlackNode insert( RedBlackNode parent, RedBlackNode root, int data) {
