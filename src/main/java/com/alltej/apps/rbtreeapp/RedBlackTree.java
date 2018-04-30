@@ -31,9 +31,9 @@ public class RedBlackTree {
     /**
      * Main insert method of red black tree.
      */
-    public RedBlackNode insert( RedBlackNode root, int data) {
-        return insertNoParent( root, data);
-    }
+//    public RedBlackNode insert( RedBlackNode root, int data) {
+//        return insertNoParent( data);
+//    }
 
     /**
      * Main delete method of red black tree.
@@ -138,7 +138,7 @@ public class RedBlackTree {
         }
     }
 
-    private RedBlackNode insertNoParent(final RedBlackNode root, int data) {
+    public RedBlackNode insertNoParent(int data) {
         if (currentRoot == null) {
             currentRoot = RedBlackNode.createBlackNode(data);
             return currentRoot;
@@ -149,6 +149,7 @@ public class RedBlackTree {
 //            return RedBlackNode.createBlackNode(data);
 //        }
 
+        final RedBlackNode root = currentRoot;
         //duplicate insertion is not allowed for this tree.
         if(root.data == data) {
             throw new IllegalArgumentException("Duplicate date " + data);
@@ -246,7 +247,8 @@ public class RedBlackTree {
                 }
             }
         }
-        return currentRoot;
+        //return currentRoot;
+        return null;
     }
 
     private RedBlackNode insert( RedBlackNode parent, RedBlackNode root, int data) {

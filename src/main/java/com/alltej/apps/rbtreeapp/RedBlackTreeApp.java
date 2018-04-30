@@ -10,24 +10,24 @@ public class RedBlackTreeApp {
         RedBlackNode root = null;
         RedBlackTree redBlackTree = new RedBlackTree();
 
-        root = redBlackTree.insert(root, 10);
-        root = redBlackTree.insert(root, 15);
-        root = redBlackTree.insert(root, -10);
-        root = redBlackTree.insert(root, 20);
-        root = redBlackTree.insert(root, 30);
-        root = redBlackTree.insert(root, 40);
-        root = redBlackTree.insert(root, 50);
-        root = redBlackTree.insert(root, -15);
-        root = redBlackTree.insert(root, 25);
-        root = redBlackTree.insert(root, 17);
-        root = redBlackTree.insert(root, 21);
-        root = redBlackTree.insert(root, 24);
-        root = redBlackTree.insert(root, 28);
-        root = redBlackTree.insert(root, 34);
-        root = redBlackTree.insert(root, 32);
-        root = redBlackTree.insert(root, 26);
-        root = redBlackTree.insert(root, 35);
-        root = redBlackTree.insert(root, 19);
+        redBlackTree.insertNoParent(10);
+        redBlackTree.insertNoParent( 15);
+        redBlackTree.insertNoParent( -10);
+        redBlackTree.insertNoParent( 20);
+        redBlackTree.insertNoParent( 30);
+        redBlackTree.insertNoParent( 40);
+        redBlackTree.insertNoParent( 50);
+        redBlackTree.insertNoParent( -15);
+        redBlackTree.insertNoParent( 25);
+        redBlackTree.insertNoParent( 17);
+        redBlackTree.insertNoParent( 21);
+        redBlackTree.insertNoParent( 24);
+        redBlackTree.insertNoParent( 28);
+        redBlackTree.insertNoParent( 34);
+        redBlackTree.insertNoParent( 32);
+        redBlackTree.insertNoParent( 26);
+        redBlackTree.insertNoParent( 35);
+        redBlackTree.insertNoParent( 19);
 
         redBlackTree.printRedBlackTree(root);
 
