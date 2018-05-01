@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.*;
 
 import static java.util.Arrays.asList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Allan Tejano
@@ -28,16 +29,22 @@ public class BfsPrint {
     }
 
     private Node a;
+    private Node b;
+    private Node c;
+    private Node d;
+    private Node e;
+    private Node f;
+    private Node g;
 
     @BeforeEach
     @Test public void setup() {
-         a = Node.of( "A" );
-        Node b = Node.of( "B" );
-        Node c = Node.of( "C" );
-        Node d = Node.of( "D" );
-        Node e = Node.of( "E" );
-        Node f = Node.of( "F" );
-        Node g = Node.of( "G" );
+        a = Node.of( "A" );
+        b = Node.of( "B" );
+        c = Node.of( "C" );
+        d = Node.of( "D" );
+        e = Node.of( "E" );
+        f = Node.of( "F" );
+        g = Node.of( "G" );
 
         a.left = b;
         a.right = c;
@@ -56,6 +63,14 @@ public class BfsPrint {
         //G
 
         printBFS( a );
+    }
+
+    @Test public void getListOfNodesListByLevel_test() {
+        List<List<Node>> nodesListByLevel = getListOfNodesListByLevel( a );
+        assertEquals( asList(a), nodesListByLevel.get( 0 ) );
+        assertEquals( asList(b, c), nodesListByLevel.get( 1 ) );
+        assertEquals( asList(d, e, f), nodesListByLevel.get( 2 ) );
+        assertEquals( asList(g), nodesListByLevel.get( 3 ) );
     }
 
     public static void printBFS(Node a){
@@ -80,5 +95,30 @@ public class BfsPrint {
                 System.out.print(elment.data);
             }
         }
+    }
+
+    public static List<List<Node>> getListOfNodesListByLevel( Node a ) {
+        ArrayDeque<List<Node>> queue = new ArrayDeque<>();
+        List<List<Node>> listOfNodesByLevel = new ArrayList<>();
+        queue.push( asList( a ) );
+
+        while ( !queue.isEmpty() ) {
+            List<Node> pop = queue.pop();
+            List<Node> list = new ArrayList<>();
+            for ( Node node : pop ) {
+                if(node.left!=null){
+                    list.add( node.left);
+                }
+                if(node.right!=null){
+                    list.add( node.right);
+                }
+            }
+            if (!list.isEmpty()){
+                queue.push( list );
+
+            }
+            listOfNodesByLevel.add( pop );
+        }
+        return listOfNodesByLevel;
     }
 }
