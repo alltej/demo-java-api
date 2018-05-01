@@ -27,14 +27,14 @@ import java.util.concurrent.atomic.AtomicReference;
  */
 public class RedBlackTree {
 
-    private RedBlackNode currentRoot;
+    private RedBlackNode treeRoot;
 
 
     /**
      * Main delete method of red black tree.
      */
     public RedBlackNode removeData( int data) {
-        final RedBlackNode root = currentRoot;
+        final RedBlackNode root = treeRoot;
         AtomicReference<RedBlackNode> rootReference = new AtomicReference<>();
         delete(root, data, rootReference);
         if(rootReference.get() == null) {
@@ -48,14 +48,14 @@ public class RedBlackTree {
      * Main print method of red black tree.
      */
     public void printFromRoot() {
-        printRedBlackTree(currentRoot, 0);
+        printRedBlackTree( treeRoot, 0);
     }
 
     /**
      * Main validate method of red black tree.
      */
     public boolean validateRedBlackTreeDefault() {
-        final  RedBlackNode root = currentRoot;
+        final  RedBlackNode root = treeRoot;
         if(root == null) {
             return true;
         }
@@ -136,12 +136,12 @@ public class RedBlackTree {
     }
 
     public void insertData(int data) {
-        if (currentRoot == null) {
-            currentRoot = RedBlackNode.createBlackNode(data);
+        if (treeRoot == null) {
+            treeRoot = RedBlackNode.createBlackNode(data);
             return;
         }
 
-        final RedBlackNode root = currentRoot;
+        final RedBlackNode root = treeRoot;
         if(root.data == data) {
             throw new IllegalArgumentException("Duplicate date " + data);
         }

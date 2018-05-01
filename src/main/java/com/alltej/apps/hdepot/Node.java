@@ -34,8 +34,11 @@ public class Node {
         this.value = value;
     }
 
-    private Node left;
-    private Node right;
+    public static Node of( int value ) {
+        return new Node( value );
+    }
+
+    private Node left, right;
     private int value;
 
     public boolean isVisited() {

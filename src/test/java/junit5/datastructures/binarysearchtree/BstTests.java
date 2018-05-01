@@ -73,6 +73,14 @@ public class BstTests {
         assertEquals( asList(n40, n25,n32, n38), nodes2 );
     }
 
+    @Test public void findPathToValue2() {
+        List<Node> nodes1 = bst.findPathToValue2( 17 );
+        assertEquals( asList(n40, n25,n10, n17), nodes1 );
+//
+//        List<Node> nodes2 = bst.findPathToValue( 38 );
+//        assertEquals( asList(n40, n25,n32, n38), nodes2 );
+    }
+
     @Test public void inOrderTranversal() {
         List<Node> nodes1 = bst.findInOrderTraversal(  );
         //assertEquals( asList(n40, n25,n10, n17), nodes1 );

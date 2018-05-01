@@ -10,6 +10,8 @@ import java.util.List;
  * 4/28/2018
  */
 public class HdepotApp {
+
+
     public static void main( String[] args ) {
         Node n5 = new Node( 5 );
         Node n3 = new Node( 3 );
@@ -29,11 +31,23 @@ public class HdepotApp {
         n4.setRight(n12 );
         //sampleA( n5 );
 
-        sampleB( n5, 2, 7 );
-        sampleB( n5, 4, 6 );
-        sampleB( n5, 3, 12);
-        sampleB( n5, 8, 6);
-        sampleB( n5, 8, 12);
+//        sampleB( n5, 2, 7 );
+//        sampleB( n5, 4, 6 );
+//        sampleB( n5, 3, 12);
+//        sampleB( n5, 8, 6);
+//        sampleB( n5, 8, 12);
+
+        sampleC( n5, 2 );
+    }
+
+    private static void sampleC( Node n5, int i ) {
+        Lca lca = new Lca();
+        List<Node> pathA = lca.printPath3( n5, i );
+        pathA.forEach( Node::getValue );
+
+//        List<Integer> pathB = lca.findPath( n5, i );
+//        System.out.println("*******");
+//        pathB.forEach( System.out::println );
     }
 
     public static void sampleB( Node n5, Integer a, Integer b ) {

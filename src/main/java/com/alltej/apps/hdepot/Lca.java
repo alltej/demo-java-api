@@ -9,16 +9,16 @@ import java.util.List;
  * @author Allan Tejano
  * 4/28/2018
  */
-public class Lca {
+public class Lca implements ILca {
 
-    public List<Integer> findPath( Node n, int a) {
+    @Override public List<Integer> findPath( Node n, int a ) {
         paths = new ArrayList<>();
         printPath( n, a );
         Collections.reverse(paths);
         return paths;
     }
 
-    public Integer findLcaData( Node n, int a, int b) {
+    @Override public Integer findLcaData( Node n, int a, int b ) {
 
         List<Integer> pathA = findPath( n, a );
         List<Integer> pathB = findPath( n, b );
@@ -37,13 +37,67 @@ public class Lca {
     }
 
     private List<Integer> paths;
-    public Boolean printPath(Node root, int data){
-        if(root==null) return false;
-        if(root.getValue()==data||printPath(root.getLeft(),data)||printPath(root.getRight(),data)){
+    public Boolean printPath(Node node, int data){
+        if(node==null) return false;
+        if(node.getValue()==data||printPath(node.getLeft(),data)||printPath(node.getRight(),data)){
             //System.out.print("  " + root.data);
-            paths.add(root.getValue());
+            paths.add(node.getValue());
             return true;
         }
         return false;
     }
+
+    public Boolean printPath2(Node node, int data){
+        if(node==null) return false;
+        paths.add(node.getValue());
+        if(( node.getValue() == data ) ){
+            return true;
+        }
+        if (printPath( node.getLeft(), data )) {
+            return true;
+        }
+        if (printPath( node.getRight(), data )) {
+            return true;
+        }
+        return false;
+    }
+
+
+//    public List<Integer> findPath( Node n, int a) {
+//        paths = new ArrayList<>();
+//        printPath( n, a );
+//        Collections.reverse(paths);
+//        return paths;
+//    }
+
+    private List<Node> nodePath;
+    public List<Node> printPath3(Node node, int data){
+        nodePath = new ArrayList<>();
+
+        findPathFromNodeToData( node, data );
+
+        return nodePath;
+
+    }
+
+    private boolean findPathFromNodeToData( Node node, int data ) {
+
+        if (node == null) return false;
+
+        if (node.getValue() == data || findPathFromNodeToData( node.getLeft(), data ) || findPathFromNodeToData( node.getRight(), data )) {
+            nodePath.add( node );
+            return true;
+        }
+        return false;
+    }
+
+//    public Boolean printPath(Node node, int data){
+//        if(node==null) return false;
+//        if(node.getValue()==data||printPath(node.getLeft(),data)||printPath(node.getRight(),data)){
+//            //System.out.print("  " + root.data);
+//            paths.add(node.getValue());
+//            return true;
+//        }
+//        return false;
+//    }
 }

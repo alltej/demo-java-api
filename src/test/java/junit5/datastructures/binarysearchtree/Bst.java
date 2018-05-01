@@ -51,6 +51,30 @@ public class Bst {
         return list;
     }
 
+    public List<Node> findPathToValue2( int i ) {
+
+        Node currNode = root;
+        ArrayList<Node> list = new ArrayList<>();
+        findPathToValueN( currNode,  i , list);
+
+//        printPreOrderRec(currRoot.getLeft());
+//        printPreOrderRec(currRoot.getRight());
+        return list;
+    }
+
+    private void findPathToValueN(Node currentNode, int i , List<Node> list) {
+        if (currentNode == null) {
+            return;
+        }
+        list.add( currentNode );
+        if (currentNode.getValue() == i) {
+            return;
+        }
+        findPathToValueN( currentNode.getLeft(), i , list);
+        findPathToValueN( currentNode.getRight(), i, list );
+
+    }
+
     public List<Node> findInOrderTraversal() {
 
         ArrayList<Node> list = new ArrayList<>();
