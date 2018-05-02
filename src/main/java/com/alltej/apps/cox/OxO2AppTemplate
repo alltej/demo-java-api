@@ -1,0 +1,36 @@
+package com.alltej.apps;
+
+import org.junit.jupiter.api.Test;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+import static java.util.Arrays.asList;
+import static java.util.stream.Collectors.summingInt;
+import static java.util.stream.Collectors.toList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+/**
+ * @author Allan Tejano
+ * 4/18/2018
+ */
+public class OxO2AppTemplate {
+
+    public int getSumOfNoDups( List<Integer> list ) {
+
+        return 1;
+    }
+
+    @Test public void sum_int_no_dups() {
+        List<Integer> list = asList( 1, 2, 3, 4, 5 );
+
+        assertEquals( 15, getSumOfNoDups( list ) );
+    }
+
+    @Test public void sum_int_with_dups() {
+        List<Integer> list = asList( 1, 2, 2 , 3, 4, 4, 5 );
+
+        assertEquals( 9, getSumOfNoDups( list ) );
+    }
+}
