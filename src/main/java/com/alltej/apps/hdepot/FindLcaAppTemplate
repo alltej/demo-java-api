@@ -48,19 +48,8 @@ public class FindLcaApp {
     }
 
     static  int findLca( final Node node, int a, int b ) {
-
-        Node root = node;
-        while ( root != null ) {
-            if (root.data > a && root.data > b) {
-                root = root.left;
-            } else if (root.data < a && root.data < b) {
-                root = root.right;
-            } else {
-                break;
-            }
-
-        }
-        return root.data;
+        //write code here
+       return 0;
 
     }
 
