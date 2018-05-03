@@ -6,35 +6,35 @@ import java.util.Objects;
  * @author Allan Tejano
  * 5/1/2018
  */
-public class BSTNode {
+public class TreeNode {
     public int getData() {
         return data;
     }
 
     private int data;
-    private BSTNode left, right;
+    private TreeNode left, right;
 
-    public static BSTNode of( int data ) {
-        return new BSTNode( data );
+    public static TreeNode of( int data ) {
+        return new TreeNode( data );
     }
 
-    private BSTNode( int data ) {
+    public TreeNode( int data ) {
         this.data = data;
     }
 
-    public BSTNode getLeft() {
+    public TreeNode getLeft() {
         return left;
     }
 
-    public void setLeft( BSTNode left ) {
+    public void setLeft( TreeNode left ) {
         this.left = left;
     }
 
-    public BSTNode getRight() {
+    public TreeNode getRight() {
         return right;
     }
 
-    public void setRight( BSTNode right ) {
+    public void setRight( TreeNode right ) {
         this.right = right;
     }
 
@@ -43,7 +43,7 @@ public class BSTNode {
             return true;
         if (o == null || getClass() != o.getClass())
             return false;
-        BSTNode bstNode = ( BSTNode ) o;
+        TreeNode bstNode = ( TreeNode ) o;
         return data == bstNode.data && Objects.equals( left, bstNode.left ) && Objects.equals( right, bstNode.right );
     }
 
@@ -53,6 +53,6 @@ public class BSTNode {
     }
 
     @Override public String toString() {
-        return "BSTNode{" + "data=" + data + ", left=" + ((left==null)?"null": left.getData()) + ", right=" + (right==null?"null":right.getData()) + '}';
+        return "TreeNode{" + "data=" + data + ", left=" + ((left==null)?"null": left.getData()) + ", right=" + (right==null?"null":right.getData()) + '}';
     }
 }

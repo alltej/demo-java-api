@@ -1,5 +1,6 @@
 package com.alltej.apps.hdepot;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -10,32 +11,40 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class FindLcaApp {
 
+    private Node root;
 
-    @Test public void lca_tests( ) {
-
-        Node node = new Node( 20 );
-        node.left = new Node( 10 );
-        node.right = new Node( 30 );
+    @BeforeEach
+    public void setup() {
+        root = new Node( 20 );
+        root.left = new Node( 10 );
+        root.right = new Node( 30 );
 
         //10
-        node.left.left = new Node( 6 );
-        node.left.right = new Node( 12);
+        root.left.left = new Node( 6 );
+        root.left.right = new Node( 12);
 
         //6
-        node.left.left.left = new Node( 3);
+        root.left.left.left = new Node( 3);
 
         //30
-        node.right.left = new Node( 24 );
-        node.right.right = new Node( 34 );
+        root.right.left = new Node( 24 );
+        root.right.right = new Node( 34 );
 
         //24
-        node.right.left.left = new Node( 21 );
+        root.right.left.left = new Node( 21 );
 
         //34
-        node.right.right.right = new Node( 49 );
+        root.right.right.right = new Node( 49 );
 
-        assertEquals( 10, findLca( node, 3, 12 ) );
-        assertEquals( 30, findLca( node, 21, 49 ) );
+    }
+
+    @Test public void printPreOrderTraversal() {
+        printPreOrderTraversal( root );
+    }
+
+    @Test public void lca_tests( ) {
+        assertEquals( 10, findLca( root, 3, 12 ) );
+        assertEquals( 30, findLca( root, 21, 49 ) );
     }
 
     static class Node {
@@ -61,6 +70,16 @@ public class FindLcaApp {
 
         }
         return root.data;
+
+    }
+
+    static void printPreOrderTraversal(Node node) {
+        if (node != null) {
+            System.out.print(node.data + ", ") ;
+            printPreOrderTraversal( node.left );
+            printPreOrderTraversal( node.right );
+        }
+
 
     }
 

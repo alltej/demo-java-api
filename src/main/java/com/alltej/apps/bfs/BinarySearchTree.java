@@ -9,31 +9,31 @@ import java.util.List;
  * 5/1/2018
  */
 public class BinarySearchTree {
-    public BSTNode getRootNode() {
+    public TreeNode getRootNode() {
         return rootNode;
     }
 
-    private BSTNode rootNode;
+    private TreeNode rootNode;
     public void insert( int data ) {
         if (rootNode == null) {
-            rootNode = BSTNode.of( data );
+            rootNode = TreeNode.of( data );
         }
         insertNode( rootNode, data );
     }
 
-    private void insertNode( BSTNode parentNode, int data ) {
+    private void insertNode( TreeNode parentNode, int data ) {
 
         if (parentNode.getData() > data) {
             //insert left
             if (parentNode.getLeft() == null) {
-                parentNode.setLeft( BSTNode.of( data ) );
+                parentNode.setLeft( TreeNode.of( data ) );
             }
             insertNode(parentNode.getLeft(),  data );
         }
         else if (parentNode.getData() < data) {
             //insert right
             if (parentNode.getRight() == null) {
-                parentNode.setRight( BSTNode.of( data ) );
+                parentNode.setRight( TreeNode.of( data ) );
             }
             insertNode(parentNode.getRight(),  data );
         }
@@ -47,7 +47,7 @@ public class BinarySearchTree {
         return nodes;
     }
 
-    private void search( BSTNode rootNode, int i ) {
+    private void search( TreeNode rootNode, int i ) {
         if (rootNode == null) return;
         nodes.add( rootNode.getData() );
         if (rootNode.getData() == i) {
@@ -62,11 +62,11 @@ public class BinarySearchTree {
 
     public int lca( int a, int b ) {
 
-        BSTNode lca = getLca( rootNode, a, b );
+        TreeNode lca = getLca( rootNode, a, b );
         return lca.getData();
     }
 
-    private BSTNode getLca( BSTNode root, int a, int b ) {
+    private TreeNode getLca( TreeNode root, int a, int b ) {
 
         while ( root != null ) {
             if (root.getData() > a && root.getData() > b) {
@@ -79,5 +79,20 @@ public class BinarySearchTree {
         }
         return root;
 
+    }
+
+    public List<Integer> getPreOrderTraversal() {
+        ArrayList<Integer> list = new ArrayList<>();
+        getPreOrderTraversalData( rootNode, list );
+        return list;
+    }
+
+    private void getPreOrderTraversalData(TreeNode node, ArrayList list) {
+        if (node != null) {
+            //System.out.print(node.getData() + ", ") ;
+            list.add( node.getData() );
+            getPreOrderTraversalData( node.getLeft(), list );
+            getPreOrderTraversalData( node.getRight(), list );
+        }
     }
 }
