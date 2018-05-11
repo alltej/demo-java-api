@@ -35,26 +35,7 @@ class Bst {
     Node root;
 
     public void printDepth() {
-
-        ArrayDeque<List<Node>> q = new ArrayDeque<>();
-        q.push( asList(root) );
-
-        while ( !q.isEmpty() ) {
-            List<Node> pop = q.pop();
-            List<Node> nodeList = new ArrayList<>();
-            System.out.println();
-            for ( Node n : pop ) {
-                System.out.print(n.data);
-                if (n.left != null) {
-                    nodeList.add( n.left );
-                }
-                if (n.right != null) {
-                    nodeList.add( n.right );
-                }
-            }
-            if (!nodeList.isEmpty())
-                q.push( nodeList );
-        }
+    //code here
     }
 }
 
