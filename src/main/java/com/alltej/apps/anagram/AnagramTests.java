@@ -2,7 +2,9 @@ package com.alltej.apps.anagram;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -32,13 +34,19 @@ public class AnagramTests {
             return true;
         }
 
-        Set<Character> anagramSetX = new HashSet<>();
-        Set<Character> anagramSetY = new HashSet<>();
-        for (int i = 0; i < x.length(); i++) {
-            anagramSetX.add(x.charAt(i));
-            anagramSetY.add(y.charAt(i));
+        Map<Character, Integer> anagramSetX = new HashMap<>();
+        //Set<Character> anagramSetY = new HashSet<>();
+        char[] xchars = x.toCharArray();
+        for (char a: xchars) {
+            anagramSetX.merge( a, 1, ( o, n ) -> o + n );
         }
-
-        return anagramSetX.size() == anagramSetY.size() ;
+        char[] ychars = y.toCharArray();
+        for (char b: ychars) {
+            Integer count = anagramSetX.merge( b, 1, (o, n) -> o-n );
+            if (count != null && count < 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
