@@ -5,12 +5,12 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CodMttlApp_180604 {
+public class CodMttlApp_180629 {
     /**
      * Given list of integers , find element n with max count
      * example:
@@ -18,12 +18,10 @@ public class CodMttlApp_180604 {
      * n: 3
      */
     private int findElementWithMaxCount( List<Integer> list ) {
-        Map<Integer, Long> collect = list.stream().collect(groupingBy(Integer::intValue, counting()));
-        Map.Entry<Integer, Long> entry = collect.entrySet().stream().collect(
-                collectingAndThen(reducing ((e1, e2) -> e1.getValue() > e2.getValue() ? e1 : e2),
-                Optional::get
-        ));
-        return entry.getKey();
+        Map<Integer, Long> collect = list.stream().collect(Collectors.groupingBy(Integer::intValue, Collectors.counting()));
+        Optional<Map.Entry<Integer, Long>> entry = collect.entrySet().stream().collect(
+                Collectors.reducing((e1, e2) -> e1.getValue() > e2.getValue() ? e1 : e2));
+        return entry.get().getKey();
     }
 
     @Test
