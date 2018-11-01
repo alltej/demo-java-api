@@ -3,14 +3,14 @@ package com.alltej.apps.lveperson;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 import static java.util.Arrays.asList;
 
 /**
- * @author Allan Tejano
- * 5/2/2018
+ * @author atejano
  */
-public class BfsPrintByDepth {
+public class BfsPrintByDepth_181101 {
     /* should print below:
 
     A
@@ -36,6 +36,20 @@ public class BfsPrintByDepth {
 
         public void printDepth() {
             //code here
+
+            Queue<List<Node>> queue = new ArrayDeque<>();
+            queue.add(asList(root));
+            while (!queue.isEmpty()) {
+                List<Node> nodes = ((ArrayDeque<List<Node>>) queue).pop();
+                List<Node> newList = new ArrayList<>();
+                nodes.forEach(n -> {
+                    System.out.print(n.data);
+                    if (n.left!= null) newList.add(n.left);
+                    if (n.right!= null) newList.add(n.right);
+                });
+                System.out.println();
+                if (!newList.isEmpty()) queue.add(newList);
+            }
         }
     }
 
@@ -48,3 +62,5 @@ public class BfsPrintByDepth {
         }
     }
 }
+
+
