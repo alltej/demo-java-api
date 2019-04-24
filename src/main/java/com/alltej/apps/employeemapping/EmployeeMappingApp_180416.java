@@ -46,7 +46,7 @@ public class EmployeeMappingApp_180416 {
 
     @Test public void get_employee_w_max_salary_by_dept() {
 
-        Map<Department, Employee> eeWMaxByDept = EmployeeMappingApp_180416.ee.stream().collect( Collectors.groupingBy( Employee::getDepartment,
+        Map<Department, Employee> eeWMaxByDept = ee.stream().collect( Collectors.groupingBy( Employee::getDepartment,
                 Collectors.collectingAndThen(
                         Collectors.reducing( ( e1, e2 ) -> e1.getSalary() > e2.getSalary() ? e1 : e2 ),
                         Optional::get ) ) );

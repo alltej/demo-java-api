@@ -2,6 +2,7 @@ package com.alltej.apps;
 
 import java.util.Collection;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
@@ -49,8 +50,8 @@ public class IntellijShortCutPractice {
     public void someMethod() {
         //*View parameter info
         //Create new ThreadPoolExecutor() and view the parameter info
-        //ExecutorService es = new ThreadPoolExecutor();
-        ExecutorService executor = new ThreadPoolExecutor(3, 5, 1000,);
+        ExecutorService es = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+        //ExecutorService executor = new ThreadPoolExecutor(3, 5, 1000,);
     }
 
     //Comment/uncomment this block of code

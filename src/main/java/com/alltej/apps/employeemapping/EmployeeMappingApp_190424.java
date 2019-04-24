@@ -8,12 +8,14 @@ import java.util.*;
 
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * @author Allan Tejano
- * 4/15/2018
+ * 3/9/2018
  */
-public class EmployeeMappingApp_180415a {
+public class EmployeeMappingApp_190424 {
+
     private static final Department DepartmentHR = Department.of( 1, "HR" );
     private static final Department DepartmentPayroll = Department.of( 2, "Payroll" );
     private static final Department DepartmentIT = Department.of( 3, "IT" );
@@ -31,52 +33,64 @@ public class EmployeeMappingApp_180415a {
             Employee.of( "CP-B", 42, "F", DepartmentCompliance, 85 )
     );
 
-    @Test public void group_employees_by_department_then_list_employees_by_dept() {
+    @Test
+    public void group_employees_by_department_then_list_employees_by_dept() {
+
     }
 
     @Test public void get_total_salary_by_dept() {
+
     }
 
     @Test public void get_employee_w_max_salary_by_dept() {
+        Map<Department, Employee> collect = ee.stream()
+                .collect( groupingBy( Employee::getDepartment,
+                        collectingAndThen(
+                                reducing((e1, e2) -> e1.getSalary()>e2.getSalary()?e1:e2), Optional::get) ) );
 
-        Map<Department, Employee> eeWMaxByDept = ee.stream().collect( groupingBy( Employee::getDepartment,
-                collectingAndThen(
-                        reducing( ( e1, e2 ) -> e1.getSalary() > e2.getSalary() ? e1 : e2 ),
-                        Optional::get ) ) );
-        eeWMaxByDept.entrySet().forEach( e -> {
-            System.out.println(e.getKey().getName() + "::" + e.getValue());
-        } );
+        assertEquals( "IT-C", collect.get( DepartmentIT ).getName() );
     }
 
     @Test public void get_employee_w_max_salary() {
-        Employee eeMaxSal = ee.stream().collect( collectingAndThen( reducing( ( e1, e2 ) -> e1.getSalary() > e2.getSalary() ? e1 : e2 ),
-                        Optional::get ) );
-        System.out.println(eeMaxSal);
+        Optional<Employee> employee = null;
+        assertEquals( "CP-B", employee.get().getName() );
     }
 
     @Test public void get_salary_stats_by_dept() {
+        Map<Department, List<Employee>> collect = ee.stream()
+                .collect( groupingBy( Employee::getDepartment, toList() ) );
+        Map<Department, IntSummaryStatistics> deptStats = new HashMap<>();
+
+        deptStats.entrySet().stream().forEach( d -> {
+            System.out.println(d.getKey().getName());
+            System.out.println(d.getValue());
+            System.out.println("--------------");
+        } );
     }
 
     @Test public void sort_employee_by_salary_using_lambda() {
+        List<Employee> collect = null;
+        collect.forEach( System.out::println );
+
     }
 
     @Test public void sort_employee_by_salary_using_comparator() {
+        List<Employee> collect = null;
+        collect.forEach( System.out::println );
     }
 
     @Test public void sort_employee_by_age_then_salary_using_comparator() {
-        ee.stream().sorted( Comparator.comparing( Employee::getAge ).thenComparing( Employee::getSalary ) )
-            .forEach( System.out::println );
+        List<Employee> collect = null;
+        collect.forEach( System.out::println );
     }
 
     @Test public void sort_employee_by_name() {
-        ee.stream().sorted( Comparator.comparing( Employee::getAge ) ).forEach( System.out::println );
+        List<Employee> collect = null;
+        collect.forEach( System.out::println );
     }
 
     @Test public void reverse_list() {
-        ee.stream().collect( collectingAndThen( toList(),
-                l-> {
-                    Collections.reverse( l );
-                    return l;
-                }) ).forEach( System.out::println );
+        List<Employee> collect = null;
+        collect.forEach( System.out::println );
     }
 }
