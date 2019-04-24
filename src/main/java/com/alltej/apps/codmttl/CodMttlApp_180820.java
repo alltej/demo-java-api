@@ -20,7 +20,8 @@ public class CodMttlApp_180820 {
      */
     private int findElementWithMaxCount( List<Integer> list ) {
         Map<Integer, Long> collect = list.stream().collect(Collectors.groupingBy(Integer::intValue, counting()));
-        Optional<Map.Entry<Integer, Long>> max = collect.entrySet().stream().collect(Collectors.reducing((e1, e2) -> e1.getValue() > e2.getValue() ? e1 : e2));
+        Optional<Map.Entry<Integer, Long>> max = collect.entrySet().stream()
+                .collect(Collectors.reducing((e1, e2) -> e1.getValue() > e2.getValue() ? e1 : e2));
 
 
         return max.get().getKey();

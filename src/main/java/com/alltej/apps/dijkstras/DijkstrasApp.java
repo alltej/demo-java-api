@@ -45,8 +45,9 @@ public class DijkstrasApp {
             System.out.println("-----------------");
             LinkedList<Node> shortestPath = n.getShortestPath();
             for ( Node s : shortestPath ) {
-                System.out.print(s.getId() + "::" + s.getDistance());
+                System.out.println(s.getId() + "::" + s.getDistance() );
             }
+            System.out.println();
         }
     }
 
