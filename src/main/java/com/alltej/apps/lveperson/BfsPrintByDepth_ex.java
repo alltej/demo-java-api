@@ -3,15 +3,22 @@ package com.alltej.apps.lveperson;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Queue;
 
 import static java.util.Arrays.asList;
 
 /**
- * @author Allan Tejano
- * 5/14/2018
+ * @author atejano
  */
-public class BfsPrintByDepth_180514  {
-    /* should print below:
+public class BfsPrintByDepth_ex {
+    /*
+
+    Given:
+                   A
+          B        |          C
+     D             |     E          F
+
+    Expected: should print below:
 
     A
     BC
@@ -30,32 +37,26 @@ public class BfsPrintByDepth_180514  {
         bst.printDepth();
     }
 
+
     static class Bst {
         Node root;
 
         public void printDepth() {
             //code here
-            ArrayDeque<List<Node>> q = new ArrayDeque<>();
-            q.add(  asList( root ) );
-            while (!q.isEmpty() ) {
-                List<Node> nodes = q.pop();
-                System.out.println();
-                List<Node> nodesToAdd = new ArrayList<>();
-                for ( Node n : nodes ) {
+
+            Queue<List<Node>> queue = new ArrayDeque<>();
+            queue.add(asList(root));
+            while (!queue.isEmpty()) {
+                List<Node> nodes = ((ArrayDeque<List<Node>>) queue).pop();
+                List<Node> newList = new ArrayList<>();
+                nodes.forEach(n -> {
                     System.out.print(n.data);
-                    if (n.left != null) {
-                        nodesToAdd.add( n.left );
-                    }
-                    if (n.right != null) {
-                        nodesToAdd.add( n.right );
-                    }
-                }
-                if (!nodesToAdd.isEmpty()) {
-                    q.add( nodesToAdd );
-                }
-
+                    if (n.left!= null) newList.add(n.left);
+                    if (n.right!= null) newList.add(n.right);
+                });
+                System.out.println();
+                if (!newList.isEmpty()) queue.add(newList);
             }
-
         }
     }
 
@@ -67,6 +68,6 @@ public class BfsPrintByDepth_180514  {
             this.data = data;
         }
     }
-
 }
+
 

@@ -9,8 +9,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author Allan Tejano
  * 5/2/2018
  */
-public class FindLcaApp {
-
+public class FindLcaApp_soln {
+    /***
+     * Find the least common ancestor(LCA) of two nodes in BST
+     *                  20
+     *        10        |          30
+     *    6        12   |     24            34
+     * 3                | 21                     49
+     *
+     *   lca(3,12)=10
+     *   lca(21,49)=20
+     *
+     */
     private Node root;
 
     @BeforeEach

@@ -4,9 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FindLcaApp_190613 {
-
-
+/**
+ * @author Allan Tejano
+ * 5/2/2018
+ */
+public class FindLcaApp_prob {
     /***
      * Find the least common ancestor(LCA) of two nodes in BST
      *                  20
@@ -18,7 +20,9 @@ public class FindLcaApp_190613 {
      *   lca(21,49)=20
      *
      */
-    @Test public void lca_tests( ) {
+
+    @Test
+    public void lca_tests( ) {
 
         Node node = new Node( 20 );
         node.left = new Node( 10 );
@@ -45,30 +49,19 @@ public class FindLcaApp_190613 {
         assertEquals( 30, findLca( node, 21, 49 ) );
     }
 
-    static class Node {
-        int data;
-        Node left, right;
+        //Node class here
+    class Node {
+            //write code here
 
-        public Node( int data ) {
-            this.data = data;
+            public Node right;public Node left;
+            private int value;
+            public Node(int value) {
+                this.value = value;
+            }
         }
-    }
 
     static  int findLca( final Node node, int a, int b ) {
         //write code here
-
-        Node n = node;
-        while (n != null) {
-            if (n.data > a && n.data > b) {
-                n = n.left;
-            } else if (n.data < a && n.data < b) {
-                n = n.right;
-            }
-            else break;
-        }
-        return n.data;
-
-
-
+        return -1;
     }
 }

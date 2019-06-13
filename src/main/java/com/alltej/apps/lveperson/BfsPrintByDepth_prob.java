@@ -1,17 +1,18 @@
 package com.alltej.apps.lveperson;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.List;
-
-import static java.util.Arrays.asList;
-
 /**
  * @author Allan Tejano
  * 5/2/2018
  */
-public class BfsPrintByDepth {
-    /* should print below:
+public class BfsPrintByDepth_prob {
+    /*
+
+    Given:
+                   A
+          B        |          C
+     D             |     E          F
+
+    Expected: should print below:
 
     A
     BC
@@ -36,6 +37,7 @@ public class BfsPrintByDepth {
 
         public void printDepth() {
             //code here
+
         }
     }
 
@@ -48,3 +50,5 @@ public class BfsPrintByDepth {
         }
     }
 }
+
+

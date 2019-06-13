@@ -10,8 +10,15 @@ import static java.util.Arrays.asList;
 /**
  * @author atejano
  */
-public class BfsPrintByDepth_181101 {
-    /* should print below:
+public class BfsPrintByDepth_soln {
+    /*
+
+    Given:
+                   A
+          B        |          C
+     D             |     E          F
+
+    Expected: should print below:
 
     A
     BC
@@ -37,18 +44,18 @@ public class BfsPrintByDepth_181101 {
         public void printDepth() {
             //code here
 
-            Queue<List<Node>> queue = new ArrayDeque<>();
-            queue.add(asList(root));
-            while (!queue.isEmpty()) {
-                List<Node> nodes = ((ArrayDeque<List<Node>>) queue).pop();
-                List<Node> newList = new ArrayList<>();
-                nodes.forEach(n -> {
+            Queue<List<Node>> q = new ArrayDeque<>();
+            q.add(asList(root));
+            while (!q.isEmpty()) {
+                List<Node> nodeList = ((ArrayDeque<List<Node>>) q).pop();
+                List<Node> childNodesList = new ArrayList<>();
+                for (Node n:nodeList) {
                     System.out.print(n.data);
-                    if (n.left!= null) newList.add(n.left);
-                    if (n.right!= null) newList.add(n.right);
-                });
+                    if (n.left!=null) childNodesList.add(n.left);
+                    if (n.right!=null) childNodesList.add(n.right);
+                }
                 System.out.println();
-                if (!newList.isEmpty()) queue.add(newList);
+                if (!childNodesList.isEmpty()) q.add(childNodesList);
             }
         }
     }
