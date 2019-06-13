@@ -3,7 +3,7 @@ package com.alltej.apps;
 import javafx.util.Pair;
 import org.junit.jupiter.api.Test;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static java.util.Arrays.asList;
@@ -15,10 +15,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 
 
-public class SnaType {
-
+public class SnaType_prob {
+    /***
+     * Given an array of int, return list of pairs whose sum is equal to param sum.
+     * @param input
+     * @param sum
+     * @return
+     */
     public List<Pair<Integer, Integer>> findPairs(  int[] input, Integer sum ) {
-
+        return Collections.emptyList();
     }
 
     @Test public void sum_of_5() {

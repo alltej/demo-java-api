@@ -13,8 +13,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author Allan Tejano
  * 5/7/2018
  */
-public class SnaType_180816 {
-
+public class SnaType_soln {
+    /***
+     * Given an array of int, return list of pairs whose sum is equal to param sum.
+     * @param input
+     * @param sum
+     * @return
+     */
     public List<Pair<Integer, Integer>> findPairs(  int[] input, Integer sum ) {
         HashSet<Integer> integers = new HashSet<>();
         List<Pair<Integer, Integer>> pairs = new ArrayList<>();
@@ -27,10 +32,9 @@ public class SnaType_180816 {
                     integers.add(c);
                     integers.add(y);
                 }
-
             }
         });
-return pairs;
+        return pairs;
     }
 
     @Test public void sum_of_5() {
