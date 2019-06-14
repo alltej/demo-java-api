@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author Allan Tejano
  * 3/9/2018
  */
-public class EmployeeMappingApp_Template {
+public class EmployeeMappingApp_prob {
 
     private static final Department DepartmentHR = Department.of( 1, "HR" );
     private static final Department DepartmentPayroll = Department.of( 2, "Payroll" );
