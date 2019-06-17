@@ -35,6 +35,14 @@ public class EmployeeMappingApp_prob {
     );
 
     @Test
+    public void convert_to_map_with_ID_as_key() {
+        Map<Integer, Employee> collect = new HashMap<>();
+        //code here
+        assertEquals("CP-B",collect.get(43).getName());
+    }
+
+
+    @Test
     public void group_employees_by_department_then_list_employees_by_dept() {
 
     }
