@@ -2,10 +2,11 @@ package com.alltej.apps.sitemapping;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.*;
 
 /**
  * @author Allan Tejano
@@ -40,7 +41,7 @@ public class MapConversionApp_prob_v2 {
         //prob: create a return of type SiteValues => HashMap<Site, List<Measurement>>
 
         //1. First step - create Map<String, List<DbRecord>>
-        Map<String, List<DbRecord>> collect = records.stream().collect(groupingBy(DbRecord::getSiteName, toList()));
+        Map<String, List<DbRecord>> collect = null;
 
         //2. Populate HashMap<String, List<Meaurement>> using forEach
         return null;
@@ -50,7 +51,7 @@ public class MapConversionApp_prob_v2 {
     public static SiteValues convertResultsUsingCollectorsMap(Collection<DbRecord> records) {
 
         //1. create Map<String, List<DbRecord>>
-        Map<String, List<DbRecord>> collect = records.stream().collect(groupingBy(DbRecord::getSiteName, toList()));
+        Map<String, List<DbRecord>> collect = null;
 
         //2. create Map<String, List<Meaurement>> using Collectors.toMap
         return null;
